@@ -1,0 +1,30 @@
+# batman
+$the_cow = <<EOC;
+       $thoughts
+        $thoughts
+                                                    ~.      
+                                                '~!7Yjh.`   
+   `n'X#<''_                                :^LP@@@@@@@@@~  
+   ;@@@@@@@@Qz;`                         '^g@@@@@@@@@@@@@.  
+    y@@@@@@@@@@@gy*~`           `   '~<<R@@@@@@@@@@@@@@@#,  
+    'R@@@@@@y,<Q@&QU@QQ@D!     `@Qoy@@@@@@@@Q@QQ@@@@@@@Q;   
+      *@@@@@     *r7Q@@@@@QN;~i&@@@@@@@d     7!f@@@@@@B'    
+      z@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@QW8Q@@@@@@@@X,     
+  `     `;%@@@@@@@@@@@@@@Qm'  `;@@@@@@@@@@@@@@@@@@@@z       
+  !`      ,B@@@@@@@@@@Q^W'      ;zKQQ@@@@@@@@@@@@@KL`       
+  'J     `!^r+?QaT^~',k'`           ka\EQ@@@@@@Q7,          
+   <+          ,                   `,    ~YoSo}|      `~=,  
+   ,Z                                               `LqDX`  
+    ;z+'                             ja,           `PDdD!   
+     :U}.                            `UW;,         `TdA;    
+      .nd|'                           ` `,        ,qD6'     
+        ^qS                        `^!            `XD7      
+         ~q|;~`        ;=.      .|J<`         :_ `kX;       
+          ,oDDbo!`       ;|\7T77L'            7btyi`        
+           ,yD%%R%P\'                    !fXk;zD}'          
+             .!YKXR%%Ky7|*?!''_=*?iziLiJS%%%%DKr            
+                ` =ddDDDR%ggggggggggRDDDDDDq7L.             
+                   `;jdDdDDDDg%%DDDDDDDK7+;`                
+                      'LkXEUqbKqU}iL|~r`                    
+                         `                                  
+EOC
