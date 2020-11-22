@@ -1,23 +1,25 @@
 #!/usr/bin/env node
 const yargs = require('yargs')
-	.usage(`
-Usage: $0 [-e eye_string] [-f cowfile] [-h] [-l] [-n] [-T tongue_string] [-W column] [-bdgpstwy] text
+  .usage(
+    `
+Usage: $0 [--think] text
 		
-If any command-line arguments are left over after all switches have been processed, they become the cow's message.
+If any command-line arguments are left over after all switches have been processed, they become the character's message.
 		
-If the program is invoked as cowthink then the cow will think its message instead of saying it.
-`)
+If the program is invoked as batmanthink then the character will think its message instead of saying it.
+`
+  )
   .options({
-    e: {
-      default: 'oo',
-    },
-    T: {
-      default: '  ',
-    },
-    W: {
-      default: 40,
-      type: 'number',
-    },
+    // e: {
+    //   default: 'oo',
+    // },
+    // T: {
+    //   default: '  ',
+    // },
+    // W: {
+    //   default: 40,
+    //   type: 'number',
+    // },
     f: {
       default: 'default',
     },
@@ -26,28 +28,28 @@ If the program is invoked as cowthink then the cow will think its message instea
     },
   })
   .describe({
-    b: 'Mode: Borg',
-    d: 'Mode: Dead',
-    g: 'Mode: Greedy',
-    p: 'Mode: Paranoia',
-    s: 'Mode: Stoned',
-    t: 'Mode: Tired',
-    w: 'Mode: Wired',
-    y: 'Mode: Youthful',
-    e: "Select the appearance of the cow's eyes.",
-    T:
-      'The tongue is configurable similarly to the eyes through -T and tongue_string.',
+    // b: 'Mode: Borg',
+    // d: 'Mode: Dead',
+    // g: 'Mode: Greedy',
+    // p: 'Mode: Paranoia',
+    // s: 'Mode: Stoned',
+    // t: 'Mode: Tired',
+    // w: 'Mode: Wired',
+    // y: 'Mode: Youthful',
+    // e: "Select the appearance of the cow's eyes.",
+    // T:
+    //   'The tongue is configurable similarly to the eyes through -T and tongue_string.',
     h: 'Display this help message',
-    n: 'If it is specified, the given message will not be word-wrapped.',
-    W:
-      'Specifies roughly where the message should be wrapped. The default is equivalent to -W 40 i.e. wrap words at or before the 40th column.',
-    f:
-      "Specifies a cow picture file (''cowfile'') to use. It can be either a path to a cow file or the name of one of cows included in the package.",
-    r: 'Select a random cow',
-    l: 'List all cowfiles included in this package.',
+    // n: 'If it is specified, the given message will not be word-wrapped.',
+    // W:
+    //   'Specifies roughly where the message should be wrapped. The default is equivalent to -W 40 i.e. wrap words at or before the 40th column.',
+    // f:
+    //   "Specifies a character picture file (''characterfile'') to use. It can be either a path to a characterfile file or the name of one of characters included in the package.",
+    // r: 'Select a random cow',
+    // l: 'List all cowfiles included in this package.',
     think: 'Think the message instead of saying it aloud.',
   })
-  .boolean(['b', 'd', 'g', 'p', 's', 't', 'w', 'y', 'n', 'h', 'r', 'l'])
+  // .boolean(['b', 'd', 'g', 'p', 's', 't', 'w', 'y', 'n', 'h', 'r', 'l'])
   .help()
   .alias('h', 'help');
 
@@ -59,12 +61,14 @@ if (argv.l) {
   say();
 } else {
   require('get-stdin')().then((data) => {
-    if (data) {
-      argv._ = [require('strip-eof')(data)];
-      say();
-    } else {
-      yargs.showHelp();
-    }
+    // if (data) {
+    //   argv._ = [require('strip-eof')(data)];
+    //   say();
+    // } else {
+    //   yargs.showHelp();
+    // }
+    argv._ = [require('strip-eof')(data)];
+    say();
   });
 }
 

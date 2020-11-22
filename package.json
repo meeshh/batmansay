@@ -1,13 +1,10 @@
 {
-  "name": "cowsay",
-  "version": "1.4.0",
-  "description": "cowsay is a configurable talking cow",
+  "name": "batmansay",
+  "version": "1.0.0",
+  "description": "batmansay is configurable talking character from batman",
   "keywords": [
-    "cow",
-    "cowsay",
-    "cowthink",
-    "figlet",
-    "talking",
+    "batman",
+    "batmansay",
     "ASCII"
   ],
   "homepage": "https://github.com/meeshh/batmansay",
@@ -16,18 +13,14 @@
     "email": "mick.f4rr3ll@gmail.com",
     "url": "https://github.com/meeshh/"
   },
-  "license": "MIT",
-  "main": "./index",
-  "module": "./build/cowsay.es.js",
-  "browser": "./build/cowsay.umd.js",
+  "main": "index,js",
   "bin": {
-    "cowsay": "cli.js",
-    "cowthink": "cli.js"
+    "batmansay": "echo | cli.js",
+    "batmanthink": "echo | cli.js"
   },
   "files": [
     "index.js",
     "cli.js",
-    "build/",
     "cows/",
     "lib/"
   ],
@@ -36,8 +29,6 @@
     "url": "https://github.com/meeshh/batmansay.git"
   },
   "scripts": {
-    "prepare": "rollup -c",
-    "test": "tape test/**/*.js | tap-dot",
     "start": "echo | node cli.js"
   },
   "dependencies": {
