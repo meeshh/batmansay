@@ -15,8 +15,8 @@
   },
   "main": "index,js",
   "bin": {
-    "batmansay": "echo | cli.js",
-    "batmanthink": "echo | cli.js"
+    "batmansay": "cli.js",
+    "batmanthink": "cli.js"
   },
   "files": [
     "index.js",

@@ -1,38 +1,43 @@
 const balloon = require('./lib/balloon');
-const cows = require('./lib/cows');
-const faces = require('./lib/faces');
+const chars = require('./lib/characters');
 
 const characters = require('./characters');
 const chosenCharacter =
   characters[Math.floor(Math.random() * characters.length)];
 
-const quotes = require(`./quotes/${chosenCharacter}`);
+let quotes;
 
 exports.say = function (options) {
-  options.f = chosenCharacter;
+  quotes = require(`./quotes/${
+    options.f != 'default' ? options.f : chosenCharacter
+  }`);
+  options.f = options.f != 'default' ? options.f : chosenCharacter;
+  console.log('%c' + options.f.toUpperCase(), 'color: blue;');
   return doIt(options, true);
 };
 
 exports.think = function (options) {
-  options.f = chosenCharacter;
+  quotes = require(`./quotes/${
+    options.f != 'default' ? options.f : chosenCharacter
+  }`);
+  options.f = options.f != 'default' ? options.f : chosenCharacter;
   return doIt(options, false);
 };
 
-exports.list = cows.list;
+exports.list = chars.list;
 
 function doIt(options, sayAloud) {
-  let cowFile;
+  let charFile;
 
   if (options.r) {
-    const cowsList = cows.listSync();
-    cowFile = cowsList[Math.floor(Math.random() * cowsList.length)];
+    const charsList = chars.listSync();
+    charFile = charsList[Math.floor(Math.random() * charsList.length)];
   } else {
-    cowFile = options.f || 'default';
+    charFile = options.f || 'default';
   }
 
-  const cow = cows.get(cowFile);
-  const face = faces(options);
-  face.thoughts = sayAloud ? '\\' : 'o';
+  const char = chars.get(charFile);
+  const face = { thoughts: sayAloud ? '\\' : 'o' };
 
   const action = sayAloud ? 'say' : 'think';
   return (
@@ -43,6 +48,6 @@ function doIt(options, sayAloud) {
       options.n ? null : options.W
     ) +
     '\n' +
-    cow(face)
+    char(face)
   );
 }

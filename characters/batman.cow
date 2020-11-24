@@ -1,5 +1,5 @@
 # batman
-$the_cow = <<EOC;
+$the_character = <<EOC;
        $thoughts
         $thoughts
              '\                               |,            
