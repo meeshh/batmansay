@@ -6,12 +6,17 @@ const chosenCharacter =
   characters[Math.floor(Math.random() * characters.length)];
 
 let quotes;
-
 exports.say = function (options) {
   quotes = require(`./quotes/${
-    options.f != 'default' ? options.f : chosenCharacter
+    options.f != 'default' && characters.indexOf(options.f) !== -1
+      ? options.f //! here is the problem
+      : chosenCharacter
   }`);
-  options.f = options.f != 'default' ? options.f : chosenCharacter;
+  options.f =
+    options.f != 'default' && characters.indexOf(options.f) !== -1
+      ? options.f
+      : chosenCharacter;
+
   console.log('%c' + options.f.toUpperCase(), 'color: blue;');
   return doIt(options, true);
 };
