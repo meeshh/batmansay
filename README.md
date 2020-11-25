@@ -1,115 +1,98 @@
-# cowsay
+# batmansay
 
-````
- __________________
-< srsly dude, why? >
- ------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-````
+```
+BATMAN
+ ______________________________________________________________________________________________________________________
+< There is a difference between you and me. We both looked into the abyss, but when it looked back at us… you blinked. >
+ ----------------------------------------------------------------------------------------------------------------------
+       \
+        \
+             '\                               |,
+             %@*                             *@Q`
+            +@@P                             P@@7
+            %@@%                             %@@Q
+           '@@@Q                             Q@@@~
+           |@@@@'                           `@@@@}
+           K@@@@;                           ,@@@@Q
+          `@@@@@}                           |@@@@@~
+          ^@@@@@Q    ,^7yUKD%NNN%DKUy7+~    D@@@@@|
+          x@@@@@@*\KQ@@@@@@@@@@@@@@@@@@@@D7^@@@@@@P
+          K@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q
+          Q@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@`
+         `@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@,
+         `@@@@@' `~xD@@@@@@@@@@@@@@@@@@@%x;` ,@@@@@'
+          @@@@@+     `;}%@@@@@@@@@@@Ny^`     |@@@@@'
+          @@@@@Q~        `;y@@@@@S^`        ,@@@@@@`
+          Q@@@@@@}'         K@@@%         'x@@@@@@@
+          N@@@@@@@@%S\+^;^|%@@@@@N\^;^+\y%@@@@@@@@Q
+          K@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q
+          y@@@+~|PQ@@@@@@@@@@@@@@@@@@@@@@@QU\~~@@@K
+          |@@@     ';xK@@@@@@@@@@@@@@@D}^'     Q@@}
+          ~@@P   `      ,|PQ@@@@@QP\~          }@@+
+          `Q@\              `~~~`              ^@@'
+           7@;                                 '@S
+           `y'                                  y`
+```
 
 cowsay is a configurable talking cow, originally written in Perl by [Tony Monroe](https://github.com/tnalpgge/rank-amateur-cowsay)
 
-This project is a translation in JavaScript of the original program and an attempt to bring the same silliness to node.js.
+It was translated to JavaScript from the original program by [Fabio Crisci](https://github.com/piuccio/cowsay)
+
+This project is an adaptation of cowsay but instead it randomly outputs characters from the Batman universe and some of their famous quotes
 
 ## Install
 
-    npm install -g cowsay
+    npm install -g batmansay
 
 ## Usage
 
-    cowsay JavaScript FTW!
+    batmansay
 
 or
 
-    cowthink node.js is cool
+    batmanthink
 
-It acts in the same way as the original cowsay, so consult `cowsay(1)` or run `cowsay -h`
+the `batmanthink` command shows the characters as if they are thinking instead of saying something
 
-````
- ________
-< indeed >
- --------
-    \
-     \
-                                   .::!!!!!!!:.
-  .!!!!!:.                        .:!!!!!!!!!!!!
-  ~~~~!!!!!!.                 .:!!!!!!!!!UWWW$$$
-      :$$NWX!!:           .:!!!!!!XUWW$$$$$$$$$P
-      $$$$$##WX!:      .<!!!!UW$$$$"  $$$$$$$$#
-      $$$$$  $$$UX   :!!UW$$$$$$$$$   4$$$$$*
-      ^$$$B  $$$$\     $$$$$$$$$$$$   d$$R"
-        "*$bd$$$$      '*$$$$$$$$$$$o+#"
-             """"          """""""
-````
+You can also run `batmansay -h` for help and `batmansay -l` to list the available characters
 
-## Usage as a module
+Once you see the characters you can use the `-f` flag to deliberately choose a character like such `batmansay -f catwoman`
 
-cowsay can be used as any other npm dependency
-
-    var cowsay = require("cowsay");
-
-    console.log(cowsay.say({
-    	text : "I'm a moooodule",
-    	e : "oO",
-    	T : "U "
-    }));
-
-    // or cowsay.think()
-
-````
- _________________
-( I'm a moooodule )
- -----------------
-        o   ^__^
-         o  (oO)\_______
-            (__)\       )\/\
-             U  ||----w |
-                ||     ||
-````
-
-## Pipe from standard input
-
-    echo please repeat | cowsay
-
-## Usage in the browser
-
-cowsay works in your browser too with rollup / webpack / browserify / you name it.
-
-```js
-import { say } from 'cowsay';
-
-console.log(say({ text: 'grazing in the browser' }));
 ```
-
-You can customize the cow by importing the relevant one
-
-```js
-import { think, SQUIRREL } from 'cowsay';
-
-console.log(think({
-  text: 'grazing in the browser',
-  cow: SQUIRREL,
-  eyes: 'pp',
-  tongue: ';;',
-}));
-```
-
-All cows are included in the bundle, but you can use rollup / webpack tree-shake feature to reduce the final bundle size.
-
-### Browser options
-
-```js
-say({
-  text: 'hello',
-  cow: '', // Template for a cow, get inspiration from `./cows`
-  eyes: 'oo', // Select the appearance of the cow's eyes, equivalent to cowsay -e
-  tongue: 'L|', // The tongue is configurable similarly to the eyes through -T and tongue_string, equivalent to cowsay -T
-  wrap: false, // If it is specified, the given message will not be word-wrapped. equivalent to cowsay -n
-  wrapLength: 40, // Specifies roughly where the message should be wrapped. equivalent to cowsay -W
-  mode: 'b', // One of 	"b", "d", "g", "p", "s", "t", "w", "y"
-});
+CATWOMAN
+ ____________________________________________________________________________________________________________________________
+< They may suspect me, but they’ll never see me. They may chase me, but they’ll never catch me. Never, never, ever catch me. >
+ ----------------------------------------------------------------------------------------------------------------------------
+       \
+        \
+               ~j'                            .f~
+              L@@R'                          .w@@u.
+            'j@@@@K.                        .y@@@@6'
+           'g@@@@@@b,                      .d@@@@@@g,
+           U@@@@@@@@W'                    .U@@@@@@@@8.
+          r@@@@@@@@@@D'.:!<i7tuff{x7i*!~.'w@@@@@@@@@@z
+          D@@@@@@@@@@@Q@@@@@@@@@@@@@@@@@@Q@@@@@@@@@@@Q
+         ,@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@,
+         .%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q.
+          ;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@i
+           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@,
+          ,@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@!
+          !@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\
+          L@@@@@@Q%K6qD&@@@@@@@@@@@@@@@@QDq6KRQ@@@@@@y
+          x@@@7:         ;E@@@@@@@@@@b;         :|@@@X
+          x@@@+            +@@@@@@@@v            ,@@@X
+          *@@@@;            <@@@@@@<            ;Q@@@{
+          ,@@@@@a            f@@@@K            z@@@@@^
+           N@@@@@Q\.        '}@@@@X'        .*&@@@@@@.
+           L@@@@@@@@W5c||JSN@@@@@@@@QPJL?cjR@@@@@@@@y
+           .%@@@@@@@@@@@@@@@Qo~  :nQ@@@@@@@@@@@@@@@%'
+            :#@@@@@@@@@@@QX?'      '+mQ@@@@@@@@@@@Q
+             '%@@@@Q6n*;'              .~*JkQ@@@@Q_
+              'S@@@+         .''''.         =@@@S
+                ;N@<      ,agQ@@@@QgP~      *@Q
+                 .?87      ,LyUqqAaL:      <N7
+                   '*z,                  ,c\'
+                     .;~.              ._;.
+                        .              .
 ```
