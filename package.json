@@ -23,7 +23,9 @@
   "files": [
     "index.js",
     "cli.js",
-    "cows/",
+    "characters.js",
+    "quotes/",
+    "characters/",
     "lib/"
   ],
   "repository": {
