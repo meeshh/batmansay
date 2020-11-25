@@ -53,7 +53,7 @@ or
 
     batmanthink
 
-the `batmanthink` command shows the characters as if they are thinking instead of saying something
+The `batmanthink` command shows the characters as if they are thinking instead of saying something
 
 You can also run `batmansay -h` for help and `batmansay -l` to list the available characters
 
@@ -96,3 +96,5 @@ CATWOMAN
                      .;~.              ._;.
                         .              .
 ```
+
+Feel free to add the command to your `.bashrc` or `.zshrc` files so you can have a character greeting when you first open your shell.
