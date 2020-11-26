@@ -41,6 +41,10 @@ It was translated to JavaScript from the original program by [Fabio Crisci](http
 
 This project is an adaptation of cowsay but instead it randomly outputs characters from the Batman universe and some of their famous quotes
 
+### Contribution
+
+Please feel free to fork it and contribute. Whether by suggesting new features or simply adding characters from the batman universe with their quotes.
+
 ## Install
 
     npm install -g batmansay
