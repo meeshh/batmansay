@@ -11,7 +11,10 @@ If the program is invoked as batmanthink then the character will think its messa
   )
   .options({
     f: {
-      default: 'default',
+      type: 'string',
+    },
+    l: {
+      type: 'boolean',
     },
     think: {
       type: 'boolean',
@@ -19,8 +22,8 @@ If the program is invoked as batmanthink then the character will think its messa
   })
   .describe({
     h: 'Display this help message',
-    f:
-      "Specifies a character picture file (''characterfile'') to use. It can be either a path to a characterfile file or the name of one of characters included in the package.",
+    f: 'Specifies a character to use from the list.',
+    l: 'List all characters available',
     think: 'Think the message instead of saying it aloud.',
   })
   .help()
