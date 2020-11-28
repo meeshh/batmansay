@@ -36,6 +36,7 @@
     "start": "echo | node cli.js"
   },
   "dependencies": {
+    "chalk": "^4.1.0",
     "get-stdin": "^5.0.1",
     "string-width": "~2.1.1",
     "strip-eof": "^1.0.0",

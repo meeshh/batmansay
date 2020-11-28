@@ -2,6 +2,7 @@ const balloon = require('./lib/balloon');
 const chars = require('./lib/characters');
 
 const characters = require('./characters');
+const chalk = require('chalk');
 const chosenCharacter =
   characters[Math.floor(Math.random() * characters.length)];
 
@@ -17,7 +18,7 @@ exports.say = function (options) {
       ? options.f
       : chosenCharacter;
 
-  console.log('%c' + options.f.toUpperCase(), 'color: blue;');
+  console.log(chalk.bgRed.white(' ' + options.f.toUpperCase() + ' '));
   return doIt(options, true);
 };
 
@@ -42,7 +43,7 @@ function doIt(options, sayAloud) {
   }
 
   const char = chars.get(charFile);
-  const face = { thoughts: sayAloud ? '\\' : 'o' };
+  const face = { thoughts: sayAloud ? chalk.red('\\') : chalk.grey('o') };
 
   const action = sayAloud ? 'say' : 'think';
   return (
