@@ -7,27 +7,34 @@ const chosenCharacter =
   characters[Math.floor(Math.random() * characters.length)];
 
 let quotes;
-exports.say = function (options) {
+
+function buildCharacter(options) {
   quotes = require(`./quotes/${
     options.f != 'default' && characters.indexOf(options.f) !== -1
-      ? options.f //! here is the problem
+      ? options.f
+      : options.f === 'default' || chosenCharacter === 'default'
+      ? 'batman'
       : chosenCharacter
   }`);
   options.f =
-    options.f != 'default' && characters.indexOf(options.f) !== -1
-      ? options.f
-      : chosenCharacter;
+    characters.indexOf(options.f) !== -1 ? options.f : chosenCharacter;
 
-  console.log(chalk.bgRed.white(' ' + options.f.toUpperCase() + ' '));
-  return doIt(options, true);
+  console.log(
+    chalk.bgRed.white(
+      options.f === 'default'
+        ? ' ' + 'batman'.toUpperCase() + ' '
+        : ' ' + options.f.toUpperCase() + ' '
+    )
+  );
+  return options;
+}
+
+exports.say = function (options) {
+  return doIt(buildCharacter(options), true);
 };
 
 exports.think = function (options) {
-  quotes = require(`./quotes/${
-    options.f != 'default' ? options.f : chosenCharacter
-  }`);
-  options.f = options.f != 'default' ? options.f : chosenCharacter;
-  return doIt(options, false);
+  return doIt(buildCharacter(options), false);
 };
 
 exports.list = chars.list;
@@ -42,18 +49,16 @@ function doIt(options, sayAloud) {
     charFile = options.f || 'default';
   }
 
-  const char = chars.get(charFile);
-  const face = { thoughts: sayAloud ? chalk.red('\\') : chalk.grey('o') };
-
+  const char = require(`./characters/${charFile}.js`);
+  const face = { thoughts: sayAloud ? chalk.white('\\') : chalk.grey('o') };
   const action = sayAloud ? 'say' : 'think';
-  return (
-    balloon[action](
-      quotes[Math.floor(Math.random() * quotes.length)] ||
-        options.text ||
-        options._.join(' '),
-      options.n ? null : options.W
-    ) +
-    '\n' +
-    char(face)
+
+  let filledBalloon = balloon[action](
+    quotes[Math.floor(Math.random() * quotes.length)] ||
+      options.text ||
+      options._.join(' '),
+    options.n ? null : options.W
   );
+
+  return filledBalloon + char(face);
 }

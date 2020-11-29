@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-const chalk = require('chalk');
 const yargs = require('yargs')
   .usage(
     `
@@ -44,14 +43,14 @@ if (argv.l) {
 }
 
 function say() {
-  const module = require('./index');
+  const module = require('.');
   const think = /think$/.test(argv['$0']) || argv.think;
 
   console.log(think ? module.think(argv) : module.say(argv));
 }
 
 function listCows() {
-  require('./index').list((err, list) => {
+  require('.').list((err, list) => {
     if (err) throw new Error(err);
     console.log(list.join('  '));
   });

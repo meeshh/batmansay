@@ -1,10 +1,11 @@
 module.exports = [
-  'batman',
-  'ivy',
   'joker',
-  'freeze',
-  'catwoman',
   'penguin',
-  'riddler',
+  'batman',
+  'catwoman',
+  'ivy',
   'robin',
+  'riddler',
+  'freeze',
+  'default',
 ];

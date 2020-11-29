@@ -1,8 +1,8 @@
-# batman
-$the_character = <<EOC;
-       $thoughts
-        $thoughts
-
+const chalk = require('chalk');
+module.exports = ({ thoughts }) => `
+       ${thoughts}
+        ${thoughts}
+        ${chalk.magenta(` 
         
               .','                        .'''              
         '<odQ@@@@@@Q8a*.             _TkQ@@@@@@@NXY!.       
@@ -18,5 +18,7 @@ $the_character = <<EOC;
    X@@@@@@@@@@@@@@@@@@@8y='       :LXQ@@@@@@@@@@@@@@@@@@@+  
     w@@@@@@@@@@@@@g5+~                .!|wQ@@@@@@@@@@@@@*   
      !&@@@@@@Qa+:                          .;LUQ@@@@@@q'    
-       ,*TL^'                                   _<c\+.      
-EOC
+       ,*TL^'                                   _<c\\+.      
+
+`)} 
+`;

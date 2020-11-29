@@ -15,7 +15,7 @@
     "email": "mick.f4rr3ll@gmail.com",
     "url": "https://github.com/meeshh/"
   },
-  "main": "index,js",
+  "main": "index.js",
   "bin": {
     "batmansay": "cli.js",
     "batmanthink": "cli.js"
