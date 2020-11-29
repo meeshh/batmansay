@@ -2,40 +2,54 @@ const chalk = require('chalk');
 module.exports = ({ thoughts }) => `
        ${thoughts}
         ${thoughts}
-                                                                             
-                                <jXK%QQQQQQQQQgKEi^~'                             
-                               'Q@@@@@@@@@@@@@@@@gRR%DmL~\`                        
-                               ;@@@@@@@@@@@@@@@@QRRRRRRg@Qa~                      
-                               7@@@@@@@@@@@@@@@@QRRRRRRQ@@@@X~                    
-                               S@@@@@@@@@@@@@@@@NRRRRRR@@@@@@@;                   
-                               D@@@@@@@@@@@@@@@@%%RR%%N@@@@@@m                    
-                              ,@@@@@@@@@@@@@@@@Q%RRRR%Q@@@@@N.                    
-                              r@@@@@@@@@@@@@@@@#%RRRRQ@@@@@Q,                     
-                              z@@@@@@@@@@@@@@@@%RRRRg@@@@@@+                      
-                              U@@@@@@@@@@@@@@@QRRRR%Q@@@@@j                       
-                             \`8@@@@@@@@@@@@@@@QRRRRW@@@@@D\`                       
-                             ~@@@@@@@@@@@@@@@@gRRRRQ@@@@Q:                        
-                             |@@@@@@@@@@@@@@@QRRR%#@@@@@;                         
-                  !\!:.      Y@@@@@@@@@@@@@@@Q%RR%Q@@@@7                          
-                  \`J@@@QDXjT*8@@@@@@@@@@@@@@@Q&&&Q@@@@Q \`'_;<cj;                  
-                    ,yQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@NQ@@@@@f\`                  
-                      .*qQ@@QRNQQQ@@@@@@@@@@@@@@Q@@@@@@@@@@Qw_        \`           
-                         .+o^!^^|?Lczxu}jjf{Iz7\\ID@@@@@@@Q!         ~R~          
-                        .LSx*|7^~~~~~~~~~~~~~~~~+|oRQ@@@@@@@Qy=:''~|U@m           
-                       ,ir,iji:*z^+;*;~~;*v{7|?ci\id@@@@@&8Q@@@@@@@@@D'.5~        
-                      :wJ yB@@E,!}=;^||r}#Qk. ~<;;?Lm@@Ez{7i%@@@@@@@q;zQ%\`        
-        '\`\`\`\`'       \`<=} ;Ddj?!~~~~~~=;,;;;^|*;~~^||Jt7q}YL%@@@@@@Q8@@Q;         
-         \`\`\`.qNUz^'  =^|jz+=;~~~~~;;;~!??LiL|=!~~~;*|||\jyP&@@@@@@@@@@N~          
-               .~+z5yqf7<;~~~~;!|xsT|?<ii;~~~~~~~~~^|||||K@@@@@@@@@@@Qy}}}fffjjjjy
-                    *j|;;!^=|c\\iisa}\*<;~;~~~~~~~~;|||||R@@@@@@@@Rj|UQ@@@@@@@@@@@
-                   'JzL/7777vuuXm7r'  .',~;!~~~~~~~;?|||7Q@Q&RbSz=^^^^<yB@@@@@@@@@
-                   \`|;{L|||||7jPz~~~~~_,,,',;~~~~~~;|||LDt'\` \`!^^^^^^^^^^zR@@@@@@@
-                 \`;IQ@@d|||||hqii||||||**<r~!;~~~~~!|||qm\`    ~^^^^^^^^^^^^i6@@@@@
-:'         \`'~?jDQ@@@@dL^<|||vKi~~~~~~~~~~~~~~~~~~;<|ik5\`     '^^^^^^^^^^^^^^*wQ@@
-@@@@@QQQQ@@@@@@@@@@@BJ^^^^<sozLySt<;~~~~~~~~~;^;~;<TXR*        ~^^^^^^^^^^^^^^^^J8
-@@Q@@@@@@@@@@@@@@@QI=t^^^^^^?jUc?+cci|*+;~~~~^^;*ydqL\`  \`      '^^^^^*L|=+^^^^^^^+
-@QQ@@@@@@@@@@@@@@K*^^iv^^^aNo~;mXT;~~~~~~~~;+zXqyL: \`!{Qq\`     \`!^^^^r^=||r^^^^+jQ
-Q@@@@@@@@@@@@@@QY^^^^^vi^?Q@@@#ou{{joSaawPEmyi~  ,i6Q@@@@+    \`;r^^^^^^^^^^^^^YB@@
-Q@@@@@@@@@@@@@%|^^^^^^^ivj@@@@@@@@qi~;=??+;~:'!}8@@@@@@@@j   \`;=+^^^^^^^^^^^Y#@@@@
-
+        ${chalk.black(`                                                                      
+             QQQQQQQQQQQQQQQQ                                      
+              Q##BBBBBBBB####NNW88#QQ                               
+                Q#NNNNNN888WWWgggggWWW8BQ                           
+                 Q#N8WWWg%%%RR%%%%gggggggWQQ          ${chalk.white(
+                   `       QoB    `
+                 )}
+                   Q%%%%RRRDDDDDRRRRRRR%%gg8NQ        ${chalk.white(
+                     `      Q\\|Q    `
+                   )}
+                    QgRDDDRRRRDDDDDDDDRR%gWN#BQQ      ${chalk.white(
+                      `    #+ |Q     `
+                    )}
+                      QRRDRRRRDDDDDDR%%%gg88NNBBQQQ   ${chalk.white(
+                        `  D_ 7Q       `
+                      )}
+                       QRDDDRDDDDRRR%ggW8NNN##BBBQQQQq${chalk.white(
+                         ` <\`L          `
+                       )}
+                         gRRRRRR%g8NN8WgggggggggW88N##d             
+                          8%g8NBB#N8Wg%RRDDDDDRR%%gggNBQQ           
+                           QQQQB#NWg%RDddbbbdddDDDRR%gW#QQ          
+                              Q#NWgRDDdbKKqqKKddDDDDR%WNBNQQ        
+                                QW%RDDdbKKqqKKddDDDDR%8NBW#QQ       
+                                  QgRDdddbKbbdddDddDRgN##N#BQQ      
+                                    QNDDDdddddDDDDDD%W#B8#BQQQQ     
+                                      qNRRDDDDRRRRRRgNB#WBQQQQQQ    
+                                    dd   #RRRR%g%%%g8#B8#BQQQQQQ    
+                                  dR      QN%%%gggg8#QN#BQQQQQQQQ   
+                                Dd          Q8gggWN#QB#BBQQQQQQQQ   
+                              DR              Q88N#QQBBQQQQQQQQQQ   
+                            Dd                 Q##QQQBQQQQQQQQQQQ   
+                          DR                     QQQBQQQQQQQQQQQQ   
+                        Dd                        QBBQQQQQQQQQQQQ   
+                      DR                             QQQQQQQQQQQQ   
+                    dd                                   QQQQQQQQ   
+        ${chalk.white(
+          `          Qdd `
+        )}                                      QQQQQ   
+        ${chalk.white(
+          `   tk   D<;N  `
+        )}                                       QQQQ   
+        ${chalk.white(
+          `    *.~,;g    `
+        )}                                         QQ   
+        ${chalk.white(
+          `    d*tSB     `
+        )}                                               
+                                                                    
+`)}
 `;
