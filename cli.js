@@ -50,7 +50,7 @@ function say() {
 }
 
 function listCharacters() {
-  require('.').list((err, list) => {
+  require('./index').list((err, list) => {
     if (err) throw new Error(err);
     console.log(list.join('  '));
   });
