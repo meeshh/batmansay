@@ -37,7 +37,7 @@ if (argv.l) {
   say();
 } else {
   require('get-stdin')().then((data) => {
-    argv._ = [require('strip-eof')(data)];
+    argv._ = [require('strip-final-newline')(data)];
     say();
   });
 }
