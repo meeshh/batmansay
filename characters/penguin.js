@@ -2,7 +2,7 @@ const chalk = require('chalk');
 module.exports = ({ thoughts }) => `
        ${thoughts}
         ${thoughts}
-        ${chalk.black(`                                                                      
+        ${chalk.blue(`                                                                      
              QQQQQQQQQQQQQQQQ                                      
               Q##BBBBBBBB####NNW88#QQ                               
                 Q#NNNNNN888WWWgggggWWW8BQ                           

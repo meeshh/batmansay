@@ -54,9 +54,9 @@ function doIt(options, sayAloud) {
   const action = sayAloud ? 'say' : 'think';
 
   let filledBalloon = balloon[action](
-    quotes[Math.floor(Math.random() * quotes.length)] ||
-      options.text ||
-      options._.join(' '),
+    options._.join(' ') ||
+      quotes[Math.floor(Math.random() * quotes.length)] ||
+      options.text,
     options.n ? null : options.W
   );
 
