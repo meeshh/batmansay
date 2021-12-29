@@ -19,16 +19,16 @@ Please feel free to fork it and contribute. Whether by suggesting new features o
 ## Usage
 
   To randomly select a character from the batman universe one of their quotes
-    batmansay
+    `batmansay`
 
   To list the available characters
-    batmansay -l
+    `batmansay -l`
 
   To display a specific character
-    batmansay -f joker
+    `batmansay -f joker`
 
   To let the character say the custom text after the command and the options if passed
-    batmansay my custom text
+    `batmansay my custom text`
 
   ![JOKER](https://github.com/meeshh/batmansay/blob/master/images/joker.png?raw=true)
 
