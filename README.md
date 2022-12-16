@@ -1,6 +1,6 @@
 # batmansay
 
-![BATMAN](https://github.com/meeshh/batmansay/blob/master/images/batman.png?raw=true)
+![BATMAN](https://github.com/meeshh/batmansay/blob/main/images/batman.png?raw=true)
 
 cowsay is a configurable talking cow, originally written in Perl by [Tony Monroe](https://github.com/tnalpgge/rank-amateur-cowsay)
 
@@ -30,7 +30,7 @@ Please feel free to fork it and contribute. Whether by suggesting new features o
   To let the character say the custom text after the command and the options if passed
     `batmansay my custom text`
 
-  ![JOKER](https://github.com/meeshh/batmansay/blob/master/images/joker.png?raw=true)
+  ![JOKER](https://github.com/meeshh/batmansay/blob/main/images/joker.png?raw=true)
 
 or
 
