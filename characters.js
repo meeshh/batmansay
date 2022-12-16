@@ -3,6 +3,7 @@ module.exports = [
   'penguin',
   'batman',
   'catwoman',
+  'rasalghul',
   'ivy',
   'robin',
   'riddler',
