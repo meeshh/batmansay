@@ -27,7 +27,8 @@ If the program is invoked as batmanthink then the character will think its messa
     think: 'Think the message instead of saying it aloud.',
   })
   .help()
-  .alias('h', 'help');
+  .alias('h', 'help')
+  .alias('v', 'version');
 
 const argv = yargs.argv;
 
