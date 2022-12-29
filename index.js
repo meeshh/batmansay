@@ -3,8 +3,26 @@ const chars = require('./lib/characters');
 
 const characters = require('./characters');
 const chalk = require('chalk');
-const chosenCharacter =
-  characters[Math.floor(Math.random() * characters.length)];
+
+const chooseRandom = (data) => {
+  let total = 0;
+  for (let i = 0; i < data.length; ++i) {
+      total += data[i][1];
+  }
+
+  const threshold = Math.random() * total;
+  total = 0;
+  for (let i = 0; i < data.length - 1; ++i) {
+      total += data[i][1];
+      if (total >= threshold) {
+          return data[i][0];
+      }
+  }
+
+  return data[data.length - 1][0];
+}
+
+const chosenCharacter = chooseRandom(characters)
 
 let quotes;
 
