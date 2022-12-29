@@ -10,5 +10,6 @@ module.exports = [
   'riddler',
   'freeze',
   'harleyquinn',
+  'batgirl',
   'default',
 ];
