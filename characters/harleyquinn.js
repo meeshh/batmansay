@@ -16,8 +16,8 @@ ${chalk.red('  %%%%%%.     .%%%%%%%%%%%%%%%%%%%%%')}${chalk.gray('%%%%%%%%%%%%%%
                ${chalk.red('%%%%%')}.................................${chalk.gray('%%%%#')}                  
                ${chalk.red('#%%%%')}...${chalk.gray('%%%%%%')}..............${chalk.gray(',%%%%%%')}...${chalk.gray('%%%%(')}                  
                ${chalk.red(' %%%%')}.${chalk.gray('%%%%%%%%%%%#')}.......${chalk.gray('%%%%%%%%%%%#')}.${chalk.gray('%%%% ')}                  
-               ${chalk.red(' %%%%')}${chalk.gray('*%%%')}..${chalk.blue('@@@')},,,${chalk.gray('%%%')},..${chalk.gray('%%%')},,,${chalk.blue('@@@')}..${chalk.gray('%%%*%%%% ')}                  
-               ${chalk.red(' %%%%')}.${chalk.gray('%%%')}....,,,..${chalk.gray('%%%%%%%')}..,,,....${chalk.gray('%%%')}.${chalk.gray('%%%% ')}                  
+               ${chalk.red(' %%%%')}${chalk.gray('*%%%')}  ${chalk.blue('@@@')}   ${chalk.gray('%%%')}   ${chalk.gray('%%%')}   ${chalk.blue('@@@')}  ${chalk.gray('%%%*%%%% ')}                  
+               ${chalk.red(' %%%%')}.${chalk.gray('%%%')}         ${chalk.gray('%%%%%%%')}         ${chalk.gray('%%%')}.${chalk.gray('%%%% ')}                  
                ${chalk.red('  %%%')}..${chalk.gray('%%%%%%%%%%%%%')}...${chalk.gray('%%%%%%%%%%%%%')}..${chalk.gray('%%%  ')}                  
                ${chalk.red('  %%%')}....${chalk.gray('%%%%')}.................${chalk.gray('%%%%')}....${chalk.gray('%%#  ')}                  
                ${chalk.red('   %%')}.................................${chalk.gray('%%   ')}                  
