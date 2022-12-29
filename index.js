@@ -45,7 +45,7 @@ function buildCharacter(options) {
         ? ' ' + 'batman'.toUpperCase() + ' '
         : ' ' + options.f.toUpperCase() + ' '
     ),
-    chalk.bgYellow(` ${'⭐'.repeat(stars)} `)
+    chalk.bgYellow(` ${isNaN(stars) ? stars : '⭐'.repeat(stars)} `)
   );
   return options;
 }

@@ -8,5 +8,5 @@ module.exports = [
   "You Must Become More Than Just A Man In The Mind Of Your Opponent.",
   "If Someone Stands In The Way Of True Justice, You Simply Walk Up Behind Them And Stab Them in The Heart.",
   "Every Time A Civilization Reaches The Pinnacle Of Its Decadence, We Return To Restore The Balance.",
-  "Time To Spread The Word, And The Word Is Panic."
+  "Time To Spread The Word, And The Word Is Panic.",
 ];
