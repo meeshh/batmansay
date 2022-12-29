@@ -49,7 +49,7 @@ function buildCharacter(options) {
         ? ' ' + DEFAULT.toUpperCase() + ' '
         : ' ' + options.f.toUpperCase() + ' '
     ),
-    chalk.bgYellow(` ${isNaN(stars) ? stars : '⭐'.repeat(stars)} `)
+    chalk.bgYellow.black(` ${isNaN(stars) ? stars : '⭐'.repeat(stars)} `)
   );
   return options;
 }
