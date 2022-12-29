@@ -28,7 +28,7 @@ let quotes;
 
 function buildCharacter(options) {
   quotes = require(`./quotes/${
-    options.f != 'default' && characters.indexOf(options.f) !== -1
+    options.f != 'default' && chars.listSync().indexOf(options.f) !== -1
       ? options.f
       : options.f === 'default' || chosenCharacter === 'default'
       ? 'batman'
