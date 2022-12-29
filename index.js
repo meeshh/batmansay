@@ -4,10 +4,12 @@ const chars = require('./lib/characters');
 const characters = require('./characters');
 const chalk = require('chalk');
 
+const DEFAULT = 'batman'
+
 const chooseRandom = (data) => {
   let total = 0;
-  for (let i = 0; i < data.length; ++i) {
-      total += data[i][1];
+  for (let char of data) {
+    total += char[1]
   }
 
   const threshold = Math.random() * total;
@@ -27,13 +29,15 @@ const [chosenCharacter, chosenWeight] = chooseRandom(characters)
 let quotes;
 
 function buildCharacter(options) {
-  quotes = require(`./quotes/${
-    options.f != 'default' && chars.listSync().indexOf(options.f) !== -1
-      ? options.f
-      : options.f === 'default' || chosenCharacter === 'default'
-      ? 'batman'
-      : chosenCharacter
-  }`);
+  let ofCharacter;
+  if(options.f != 'default' && chars.listSync().indexOf(options.f) !== -1) {
+    ofCharacter = options.f
+  } else if(options.f === 'default' || chosenCharacter === 'default') {
+    ofCharacter = DEFAULT
+  } else {
+    ofCharacter = chosenCharacter
+  }
+  quotes = require(`./quotes/${ofCharacter}`)
 
   const stars = options.f ? '* NOT AVAILABLE WITH -f option' : 11 - chosenWeight
 
@@ -42,7 +46,7 @@ function buildCharacter(options) {
   console.log(
     chalk.bgRed.white(
       options.f === 'default'
-        ? ' ' + 'batman'.toUpperCase() + ' '
+        ? ' ' + DEFAULT.toUpperCase() + ' '
         : ' ' + options.f.toUpperCase() + ' '
     ),
     chalk.bgYellow(` ${isNaN(stars) ? stars : '⭐'.repeat(stars)} `)
