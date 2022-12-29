@@ -10,6 +10,7 @@ module.exports = [
   ["riddler", 7],
   ["freeze", 5],
   ["harleyquinn", 8],
+  ["twoface", 6],
   ["batgirl", 7],
   ["default", 3],
 ];
