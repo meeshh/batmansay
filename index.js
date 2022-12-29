@@ -15,14 +15,14 @@ const chooseRandom = (data) => {
   for (let i = 0; i < data.length - 1; ++i) {
       total += data[i][1];
       if (total >= threshold) {
-          return data[i][0];
+          return data[i];
       }
   }
 
-  return data[data.length - 1][0];
+  return data[data.length - 1];
 }
 
-const chosenCharacter = chooseRandom(characters)
+const [chosenCharacter, chosenWeight] = chooseRandom(characters)
 
 let quotes;
 
@@ -35,15 +35,17 @@ function buildCharacter(options) {
       : chosenCharacter
   }`);
 
+  const stars = options.f ? '* NOT AVAILABLE WITH -f option' : 11 - chosenWeight
+
   options.f =
   chars.listSync().indexOf(options.f) !== -1 ? options.f : chosenCharacter;
-
   console.log(
     chalk.bgRed.white(
       options.f === 'default'
         ? ' ' + 'batman'.toUpperCase() + ' '
         : ' ' + options.f.toUpperCase() + ' '
-    )
+    ),
+    chalk.bgYellow(` ${'⭐'.repeat(stars)} `)
   );
   return options;
 }
