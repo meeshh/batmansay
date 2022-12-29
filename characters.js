@@ -12,5 +12,6 @@ module.exports = [
   ["harleyquinn", 8],
   ["twoface", 6],
   ["batgirl", 7],
+  ["scarecrow", 3],
   ["default", 3],
 ];
