@@ -34,8 +34,9 @@ function buildCharacter(options) {
       ? 'batman'
       : chosenCharacter
   }`);
+
   options.f =
-    characters.indexOf(options.f) !== -1 ? options.f : chosenCharacter;
+  chars.listSync().indexOf(options.f) !== -1 ? options.f : chosenCharacter;
 
   console.log(
     chalk.bgRed.white(
