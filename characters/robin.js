@@ -2,7 +2,7 @@ const chalk = require('chalk');
 module.exports = ({ thoughts }) => `
        ${thoughts}
         ${thoughts}
-        
+        ${chalk.green(`
          \`?D.                                .D?\`     
        \`n@@@~                                ~@@@u\`   
       ^Q@@@@@=                              =@@@@@Q^  
@@ -23,5 +23,5 @@ module.exports = ({ thoughts }) => `
      .b@@@@@@@@@@@@@@@B{:        :{&@@@@@@@@@@@@@@@b. 
        ~X@@@@@@@@8E7;\`              \`;7E8@@@@@@@@X~   
          \`!jgQn,                          ,nQgj!\`     
-
+`)}
 `;
