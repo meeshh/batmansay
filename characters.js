@@ -13,5 +13,6 @@ module.exports = [
   ["twoface", 6],
   ["batgirl", 7],
   ["scarecrow", 3],
+  ["alfred", 0],
   ["default", 3],
 ];
