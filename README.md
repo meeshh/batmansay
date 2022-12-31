@@ -32,7 +32,7 @@ The commands `batmansay` and `batmanthink` print a random character from the Bat
   To let the character say the custom text after the command and the options if passed
     `batmansay my custom text` 
   
-  OR you can simply generate the text with another tool and pipe it into `batmansay` like the following: `echo "My random text | batmansay"`
+  OR you can simply generate the text with another tool and pipe it into `batmansay` like the following: `echo "My random text" | batmansay`
 
   ![JOKER](https://github.com/meeshh/batmansay/blob/main/images/screenshot_joker.png?raw=true)
 
