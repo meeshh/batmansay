@@ -2,7 +2,7 @@
 
 ![BATMAN](https://github.com/meeshh/batmansay/blob/main/images/screenshot_mosaique.png?raw=true)
 
-## What is `cowsay`?
+## ❖ What is `cowsay`?
 cowsay is a configurable talking cow, originally written in Perl by [Tony Monroe](https://github.com/tnalpgge/rank-amateur-cowsay)
 
 It was translated to JavaScript from the original program by [Fabio Crisci](https://github.com/piuccio/cowsay)
@@ -14,11 +14,11 @@ This project is an adaptation of cowsay but instead, it randomly outputs charact
 The commands `batmansay` and `batmanthink` print a random character from the Batman universe in your SHELL. Each character has a weight depending on its rarity. The number of stars next to the character's name represents the rarity of the character. The more stars, the more rare the character is.
 
 
-## Install
+## ❖ Install
 
     npm install -g batmansay
 
-## Usage
+## ❖ Usage
 
   To randomly select a character from the batman universe and one of their quotes
     `batmansay`
@@ -46,7 +46,7 @@ You can also run `batmansay -h` for help
 
 Feel free to add the command to your `.bashrc` or `.zshrc` files so you can have a character greeting when you first open your shell. Or perhaps your CI/CD pipeline to pipe the error logs into `batmansay`
 
-### Contribution
+## ❖ Contribution
 
 Make sure to add a character file `character_name.js` in the `characters` directory. Replace character_name with the name of the character. Add the `ascii` image to the file and export it. Please see the other characters as examples.
 
