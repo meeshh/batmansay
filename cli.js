@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-require('dotenv').config(); // this loads env vars
+require('dotenv').config() // this loads env vars
 
 const yargs = require('yargs')
   .usage(
@@ -30,30 +30,30 @@ If the program is invoked as batmanthink then the character will think its messa
   })
   .help()
   .alias('h', 'help')
-  .alias('v', 'version');
+  .alias('v', 'version')
 
-const argv = yargs.argv;
-
-if (argv.l) {
-  listCharacters();
-} else if (argv._.length) {
-  say();
-} else {
-  require('get-stdin')().then((data) => {
-    argv._ = [require('strip-final-newline')(data)];
-    say();
-  });
-}
+const { argv } = yargs
 
 function say() {
-  const module = require('./index');
-  const think = /think$/.test(argv['$0']) || argv.think;
-  think ? module.think(argv) : module.say(argv)
+  const module = require('./index')
+  const think = /think$/.test(argv.$0) || argv.think
+  return think ? module.think(argv) : module.say(argv)
 }
 
 function listCharacters() {
   require('./index').list((err, list) => {
-    if (err) throw new Error(err);
-    console.log(list.join('  '));
-  });
+    if (err) throw new Error(err)
+    console.log(list.join('  '))
+  })
+}
+
+if (argv.l) {
+  listCharacters()
+} else if (argv._.length) {
+  say()
+} else {
+  require('get-stdin')().then((data) => {
+    argv._ = [require('strip-final-newline')(data)]
+    say()
+  })
 }
