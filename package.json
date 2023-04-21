@@ -1,6 +1,6 @@
 {
   "name": "batmansay",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "batmansay is a configurable talking character from batman",
   "license": "MIT",
   "keywords": [
@@ -33,14 +33,24 @@
     "url": "https://github.com/meeshh/batmansay.git"
   },
   "scripts": {
-    "start": "echo | node cli.js"
+    "start": "echo | node cli.js",
+    "lint": "eslint **.js --fix"
   },
   "dependencies": {
     "chalk": "^4.1.0",
+    "dotenv": "^16.0.3",
     "get-stdin": "^8.0.0",
+    "openai": "^3.2.1",
     "string-width": "^4.2.0",
     "strip-final-newline": "^2.0.0",
     "yargs": "^16.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.7"
   },
   "preferGlobal": true,
   "engines": {
