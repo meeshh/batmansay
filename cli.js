@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+require('dotenv').config(); // this loads env vars
+
 const yargs = require('yargs')
   .usage(
     `
@@ -46,8 +48,7 @@ if (argv.l) {
 function say() {
   const module = require('./index');
   const think = /think$/.test(argv['$0']) || argv.think;
-
-  console.log(think ? module.think(argv) : module.say(argv));
+  think ? module.think(argv) : module.say(argv)
 }
 
 function listCharacters() {
