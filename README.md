@@ -2,12 +2,10 @@
 
 ![BATMAN](https://github.com/meeshh/batmansay/blob/main/images/screenshot_mosaique.png?raw=true)
 
-## ❖ What is `cowsay`?
-cowsay is a configurable talking cow, originally written in Perl by [Tony Monroe](https://github.com/tnalpgge/rank-amateur-cowsay)
+## ❖ What is `batmansay`?
 
-It was translated to JavaScript from the original program by [Fabio Crisci](https://github.com/piuccio/cowsay)
+This project is an adaptation of cowsay which is a popular Unix program but instead, it randomly outputs ASCII art from the Batman universe and some of their famous quotes
 
-This project is an adaptation of cowsay but instead, it randomly outputs characters from the Batman universe and some of their famous quotes
 
 ### What to expect?
 
@@ -45,6 +43,26 @@ The `batmanthink` command shows the characters as if they are thinking instead o
 You can also run `batmansay -h` for help
 
 Feel free to add the command to your `.bashrc` or `.zshrc` files so you can have a character greeting when you first open your shell. Or perhaps your CI/CD pipeline to pipe the error logs into `batmansay`
+
+## OpenAI integration
+If you want to use OpenAI integration to generate a random quote from ChatGPT for the randomly chosen character, you can follow these steps:
+
+1. Generate an API key from OpenAI by visiting the OpenAI Developer Dashboard.
+
+2. Set the environment variable TOKEN_OPENAI to your API key. You can do this by adding the following line to your shell configuration file (~/.bashrc for Bash, ~/.zshrc for Zsh, ~/.config/fish/config.fish for Fish):
+
+    ```bash
+    export TOKEN_OPENAI=YOUR_API_KEY
+    ```
+    Alternatively, if you're using Node.js for development purposes, you can create a `.env` file in the root directory of your project with the following content:
+
+    ```javascript
+    TOKEN_OPENAI=YOUR_API_KEY
+    ```
+
+    This will allow you to access your OpenAI API key in your Node.js code through the `process.env.TOKEN_OPENAI` variable.
+
+Once you have set the `TOKEN_OPENAI` environment variable, batmansay will use it to generate a random quote for the randomly chosen character.
 
 ## ❖ Contribution
 
