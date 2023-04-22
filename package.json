@@ -7,7 +7,9 @@
     "cowsay",
     "batman",
     "batmansay",
-    "ASCII"
+    "ASCII",
+    "OpenAI",
+    "ChatGPT"
   ],
   "homepage": "https://github.com/meeshh/batmansay",
   "author": {
