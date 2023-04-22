@@ -1,13 +1,15 @@
 {
   "name": "batmansay",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "batmansay is a configurable talking character from batman",
   "license": "MIT",
   "keywords": [
     "cowsay",
     "batman",
     "batmansay",
-    "ASCII"
+    "ASCII",
+    "OpenAI",
+    "ChatGPT"
   ],
   "homepage": "https://github.com/meeshh/batmansay",
   "author": {
