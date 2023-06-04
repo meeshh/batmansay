@@ -36,7 +36,7 @@
   },
   "scripts": {
     "start": "echo | node cli.js",
-    "lint": "eslint **.js --fix"
+    "lint": "eslint */**.js --fix"
   },
   "dependencies": {
     "chalk": "^4.1.0",
