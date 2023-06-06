@@ -14,5 +14,6 @@ module.exports = [
   ['batgirl', 7],
   ['scarecrow', 3],
   ['alfred', 0],
+  ['bane', 1],
   ['default', 3],
 ]
