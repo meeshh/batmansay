@@ -27,4 +27,4 @@ module.exports = ({ thoughts }) => `
           \`Q@\\              \`~~~\`              ^@@'         
            7@;                                 '@S          
            \`y'                                  y\`          
-`;
+`

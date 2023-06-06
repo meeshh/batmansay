@@ -1,4 +1,5 @@
-const chalk = require('chalk');
+const chalk = require('chalk')
+
 module.exports = ({ thoughts }) => `
                          ${thoughts}
                           ${thoughts}
@@ -34,4 +35,4 @@ module.exports = ({ thoughts }) => `
                                      @@@@@@@                                    
                                         @                                       
 `)}  
-`;
+`

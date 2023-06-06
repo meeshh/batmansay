@@ -1,4 +1,5 @@
-const chalk = require('chalk');
+const chalk = require('chalk')
+
 module.exports = ({ thoughts }) => `
        ${thoughts}
         ${thoughts}
@@ -11,17 +12,17 @@ module.exports = ({ thoughts }) => `
     b@@@@@@@@@@@@@@@@Ry|;'      ';|yR@@@@@@@@@@@@@@@@b
     @@@@@@@b<,.\`\`'~<nb@@@@@@QQ@@@@@@bn<~'\`\`.,<b@@@@@@@
     @@QQ@@x${chalk.white('@@@@@@@@@@@@')}~y@@@@@@@@y~${chalk.white(
-  '@@@@@@@@@@@@'
-)}t@@QQ@@
+          '@@@@@@@@@@@@'
+        )}t@@QQ@@
     Q@@@@@=${chalk.white('@@@@@@@@@@@@@@')}k@@@@@@X${chalk.white(
-  '@@@@@@@@@@@@@@'
-)}+@@@@@Q
+          '@@@@@@@@@@@@@@'
+        )}+@@@@@Q
     S@@@@@@i\`${chalk.white('@@@@@@@@@@')};q@@@@@@@@q;${chalk.white(
-  '@@@@@@@@@@'
-)}\`i@@@@@@S
+          '@@@@@@@@@@'
+        )}\`i@@@@@@S
     \`Q@@@@@@@NEY\\i\\Iwg@@@%=\`  \`=g@@@gwI\\i\\YEN@@@@@@@Q\`
      .b@@@@@@@@@@@@@@@B{:        :{&@@@@@@@@@@@@@@@b. 
        ~X@@@@@@@@8E7;\`              \`;7E8@@@@@@@@X~   
          \`!jgQn,                          ,nQgj!\`     
 `)}
-`;
+`
