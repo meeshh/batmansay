@@ -42,7 +42,6 @@
     "chalk": "^4.1.0",
     "dotenv": "^16.0.3",
     "get-stdin": "^8.0.0",
-    "openai": "^3.2.1",
     "string-width": "^4.2.0",
     "strip-final-newline": "^2.0.0",
     "yargs": "^16.1.1"

@@ -1,15 +1,10 @@
 const chalk = require('chalk')
-const { Configuration, OpenAIApi } = require('openai')
 const balloon = require('./lib/balloon')
 const chars = require('./lib/characters')
 
 const characters = require('./characters')
 
 const DEFAULT = 'batman'
-
-const configuration = new Configuration({
-  apiKey: process.env.TOKEN_OPENAI,
-})
 
 const chooseRandom = (data) => {
   let total = 0
@@ -66,35 +61,9 @@ function buildCharacter(options) {
 
 exports.list = chars.list
 
-async function generateAIText(character) {
-  const openai = new OpenAIApi(configuration)
-  return openai
-    .createCompletion({
-      model: 'text-davinci-003',
-      prompt: `get me a random quote of ${character} from the batman universe but return to me only the words that they said`,
-      temperature: 0.9,
-      top_p: 1,
-      frequency_penalty: 0,
-      max_tokens: 2048,
-      presence_penalty: -1.0,
-    })
-    .then((response) => {
-      return response.data.choices[0].text
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-}
-
-async function selectQuote(character) {
-  let selectedQuote
-  if (process.env.TOKEN_OPENAI) {
-    selectedQuote = await generateAIText(character)
-  } else {
-    selectedQuote = quotes[Math.floor(Math.random() * quotes.length)]
-  }
-
-  return selectedQuote
+async function selectQuote() {
+  // return selectedQuote
+  return quotes[Math.floor(Math.random() * quotes.length)]
 }
 
 async function doIt(options, sayAloud) {
@@ -112,9 +81,7 @@ async function doIt(options, sayAloud) {
   const action = sayAloud ? 'say' : 'think'
 
   // handle the selected quote.
-  // if process.env does not exist, then get from array of quotes
-  // if it exists, generate from open ai with a fallback on error to select from the array of quotes
-  const myQuote = await selectQuote(charFile)
+  const myQuote = await selectQuote()
 
   const filledBalloon = balloon[action](
     options._.join(' ') ||
