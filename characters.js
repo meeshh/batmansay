@@ -16,5 +16,7 @@ module.exports = [
   ['alfred', 0],
   ['bane', 1],
   ['jim', 3],
+  ['bloom', 1],
+  ['pyg', 1],
   ['default', 3],
 ]
