@@ -44,25 +44,31 @@ You can also run `batmansay -h` for help
 
 Feel free to add the command to your `.bashrc` or `.zshrc` files so you can have a character greeting when you first open your shell. Or perhaps your CI/CD pipeline to pipe the error logs into `batmansay`
 
-## OpenAI integration
-If you want to use OpenAI integration to generate a random quote from ChatGPT for the randomly chosen character, you can follow these steps:
+## ❖ Development
 
-1. Generate an API key from OpenAI by visiting the OpenAI Developer Dashboard.
+This project uses [Yarn](https://yarnpkg.com/) (v4.11.0) with [Corepack](https://nodejs.org/api/corepack.html) for package management and [Biome](https://biomejs.dev/) for linting and formatting.
 
-2. Set the environment variable TOKEN_OPENAI to your API key. You can do this by adding the following line to your shell configuration file (~/.bashrc for Bash, ~/.zshrc for Zsh, ~/.config/fish/config.fish for Fish):
+To get started:
 
-    ```bash
-    export TOKEN_OPENAI=YOUR_API_KEY
-    ```
-    Alternatively, if you're using Node.js for development purposes, you can create a `.env` file in the root directory of your project with the following content:
+1. Enable Corepack (if not already enabled):
+   ```bash
+   corepack enable
+   ```
 
-    ```javascript
-    TOKEN_OPENAI=YOUR_API_KEY
-    ```
+2. Install dependencies:
+   ```bash
+   yarn install
+   ```
 
-    This will allow you to access your OpenAI API key in your Node.js code through the `process.env.TOKEN_OPENAI` variable.
+3. Run linting:
+   ```bash
+   yarn lint
+   ```
 
-Once you have set the `TOKEN_OPENAI` environment variable, batmansay will use it to generate a random quote for the randomly chosen character.
+4. Format code:
+   ```bash
+   yarn format
+   ```
 
 ## ❖ Contribution
 

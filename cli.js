@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import 'dotenv/config'; // this loads env vars
 import getStdin from 'get-stdin';
 import stripFinalNewline from 'strip-final-newline';
 import yargs from 'yargs';

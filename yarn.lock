@@ -116,9 +116,7 @@ __metadata:
   dependencies:
     "@biomejs/biome": "npm:^2.3.4"
     chalk: "npm:^5.6.2"
-    dotenv: "npm:^17.2.3"
     get-stdin: "npm:^9.0.0"
-    openai: "npm:^6.8.1"
     string-width: "npm:^8.1.0"
     strip-final-newline: "npm:^4.0.0"
     yargs: "npm:^18.0.0"
@@ -143,13 +141,6 @@ __metadata:
     strip-ansi: "npm:^7.1.0"
     wrap-ansi: "npm:^9.0.0"
   checksum: 10c0/13441832e9efe7c7a76bd2b8e683555c478d461a9f249dc5db9b17fe8d4b47fa9277b503914b90bd00e4a151abb6b9b02b2288972ffe2e5e3ca40bcb1c2330d3
-  languageName: node
-  linkType: hard
-
-"dotenv@npm:^17.2.3":
-  version: 17.2.3
-  resolution: "dotenv@npm:17.2.3"
-  checksum: 10c0/c884403209f713214a1b64d4d1defa4934c2aa5b0002f5a670ae298a51e3c3ad3ba79dfee2f8df49f01ae74290fcd9acdb1ab1d09c7bfb42b539036108bb2ba0
   languageName: node
   linkType: hard
 
@@ -185,23 +176,6 @@ __metadata:
   version: 9.0.0
   resolution: "get-stdin@npm:9.0.0"
   checksum: 10c0/7ef2edc0c81a0644ca9f051aad8a96ae9373d901485abafaabe59fd347a1c378689d8a3d8825fb3067415d1d09dfcaa43cb9b9516ecac6b74b3138b65a8ccc6b
-  languageName: node
-  linkType: hard
-
-"openai@npm:^6.8.1":
-  version: 6.8.1
-  resolution: "openai@npm:6.8.1"
-  peerDependencies:
-    ws: ^8.18.0
-    zod: ^3.25 || ^4.0
-  peerDependenciesMeta:
-    ws:
-      optional: true
-    zod:
-      optional: true
-  bin:
-    openai: bin/cli
-  checksum: 10c0/84d663179db9f97b1ba921e7eafd870501b93e376f59fd035207edfa3bc6de97a1fd00a904f1f22bff72f19981781bb69a529f89a14e7c548150ae659dd2d100
   languageName: node
   linkType: hard
 

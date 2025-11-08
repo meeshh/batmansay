@@ -1,5 +1,4 @@
 import chalk from 'chalk';
-import OpenAI from 'openai';
 import characters from './characters.js';
 import { say as balloonSay, think as balloonThink } from './lib/balloon.js';
 import * as chars from './lib/characters.js';
@@ -64,38 +63,8 @@ async function buildCharacter(options) {
 
 export const list = chars.list;
 
-async function generateAIText(character) {
-  const openai = new OpenAI({
-    apiKey: process.env.TOKEN_OPENAI,
-  });
-  try {
-    const response = await openai.completions.create({
-      model: 'text-davinci-003',
-      prompt: `get me a random quote of ${character} from the batman universe but return to me only the words that they said`,
-      temperature: 0.9,
-      top_p: 1,
-      frequency_penalty: 0,
-      max_tokens: 2048,
-      presence_penalty: -1.0,
-    });
-    return response.choices[0].text;
-  } catch (error) {
-    console.log(error);
-    return undefined;
-  }
-}
-
-async function selectQuote(character) {
-  let selectedQuote;
-  if (process.env.TOKEN_OPENAI) {
-    selectedQuote = await generateAIText(character);
-  }
-
-  if (!selectedQuote) {
-    selectedQuote = quotes[Math.floor(Math.random() * quotes.length)];
-  }
-
-  return selectedQuote;
+function selectQuote() {
+  return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
 async function doIt(options, sayAloud) {
@@ -113,19 +82,17 @@ async function doIt(options, sayAloud) {
   const face = { thoughts: sayAloud ? chalk.white('\\') : chalk.grey('o') };
 
   // handle the selected quote.
-  // if process.env does not exist, then get from array of quotes
-  // if it exists, generate from open ai with a fallback on error to select from the array of quotes
-  const myQuote = await selectQuote(charFile);
+  const myQuote = selectQuote();
 
   const filledBalloon = sayAloud
     ? balloonSay(
-      options._.join(' ') || myQuote.trim() || options.text,
-      options.n ? null : options.W,
-    )
+        options._.join(' ') || myQuote.trim() || options.text,
+        options.n ? null : options.W,
+      )
     : balloonThink(
-      options._.join(' ') || myQuote.trim() || options.text,
-      options.n ? null : options.W,
-    );
+        options._.join(' ') || myQuote.trim() || options.text,
+        options.n ? null : options.W,
+      );
 
   return filledBalloon + char(face);
 }
