@@ -1,11 +1,9 @@
 {
-    "files.autoSave": "off",
-    "editor.formatOnSave": false,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
-    },
-    "eslint.validate": [
-      "javascript"
-    ],
-    "files.eol": "\n"
-  }
+  "files.autoSave": "off",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit"
+  },
+  "files.eol": "\n"
+}

@@ -10,4 +10,4 @@ export default [
   "In this universe, there's only one absolute... everything freezes!",
   'The Ice Man cometh!',
   'Freeze in hell, Batman! ',
-]
+];

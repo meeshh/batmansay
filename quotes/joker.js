@@ -9,4 +9,4 @@ export default [
   'We stopped checking for monsters under our bed, when we realized they were inside us.',
   'If you’re good at something, never do it for free.',
   'When the chips are down, these civilized people, they’ll eat each other.',
-]
+];

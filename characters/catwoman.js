@@ -30,4 +30,4 @@ export default ({ thoughts }) => `
                    '*z,                  ,c\\'
                      .;~.              ._;.
                         .              .
-`
+`;

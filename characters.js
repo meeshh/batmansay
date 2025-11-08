@@ -17,4 +17,4 @@ export default [
   ['bane', 1],
   ['jim', 3],
   ['default', 3],
-]
+];

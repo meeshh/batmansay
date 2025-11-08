@@ -6,4 +6,4 @@ export default [
   "Tell me and I'll kiss you. ",
   "A poison kiss? You have some real issues with women, you know that? You just couldn't stand it that \nshe was going to kiss me and not you, wasn't it? You couldn't stand it that she wanted me and not you! ",
   "Is your thumb the only part of you that's green? ",
-]
+];

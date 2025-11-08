@@ -1,4 +1,4 @@
-import chalk from 'chalk'
+import chalk from 'chalk';
 
 export default ({ thoughts }) => `
        ${thoughts}
@@ -11,16 +11,16 @@ export default ({ thoughts }) => `
     y@@@@@@@@@@@gy*~\`           \`   '~<<R@@@@@@@@@@@@@@@#,  
     'R@@@@@@y,<Q@&QU@QQ@D!     \`@Qoy@@@@@@@@Q@QQ@@@@@@@Q;   
       *@@@@@${chalk.white('@@@@@*')}r7Q@@@@@QN;~i&@@@@@@@d${chalk.white(
-          '@@@@@7'
-        )}!f@@@@@@B'    
+        '@@@@@7',
+      )}!f@@@@@@B'    
       z@@@@@@@@${chalk.white('@@')}@@@@@@@@@@@@@@@@@@@@@@@@${chalk.white(
-          'QW8Q'
-        )}@@@@@@@@X,     
+        'QW8Q',
+      )}@@@@@@@@X,     
    ${chalk.red(`\``)}     \`;%@@@@@@@@@@@@@@Qm'  \`;@@@@@@@@@@@@@@@@@@@@z       
    ${chalk.red(`!\``)}      ,B@@@@@@@@@@Q^W'      ;zKQQ@@@@@@@@@@@@@KL\`       
    ${chalk.red(`'J`)}     \`!^r+?QaT^~',k'\`           kaEQ@@@@@@Q7,          
    ${chalk.red(
-     `<+`
+     `<+`,
    )}          ,                   \`,    ~YoSo}|      ${chalk.red(`\`~=,  `)}
 ${chalk.red(`   ,Z                                               \`LqDX\`  
     ;z+'                             ja,           \`PDdD!   
@@ -37,4 +37,4 @@ ${chalk.red(`   ,Z                                               \`LqDX\`
                         \`                              
 `)}
 `)}
-`
+`;

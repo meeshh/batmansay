@@ -8,4 +8,4 @@ export default [
   'If you kill a killer, the number of killers in the room remains the same.',
   'There is a difference between you and me. We both looked into the abyss, \nbut when it looked back at us… you blinked.',
   'Why do we fall, Bruce? So that we can learn to pick ourselves back up.',
-]
+];

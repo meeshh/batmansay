@@ -8,4 +8,4 @@ export default [
   "You gotta admit I played this stinkin' city like a harp from hell. ",
   "You're Beauty and the Beast in one luscious Christmas gift pack.",
   "Just relax. I'll take care of the squealing, wretched, pinhead puppets of Gotham!",
-]
+];

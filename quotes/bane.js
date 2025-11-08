@@ -4,4 +4,4 @@ export default [
   'Victory has defeated you.',
   'I will show you where I have made my home while preparing to bring justice. Then I will break you.',
   "I am Gotham's reckoning.",
-]
+];

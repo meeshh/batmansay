@@ -7,4 +7,4 @@ export default [
   "That's part of the rule. Never quit. Never let them see you're afraid. Above all — \nnever let them see you're hurt. Never let them see you cry. Never.",
   "My world is all just shades of grey, Batman. That's why you'll never really understand me.",
   "Life would be so much easier if I didn't have this conscience!",
-]
+];

@@ -1,4 +1,4 @@
-import chalk from 'chalk'
+import chalk from 'chalk';
 
 export default ({ thoughts }) => `
        ${thoughts}
@@ -8,19 +8,19 @@ export default ({ thoughts }) => `
               Q##BBBBBBBB####NNW88#QQ                               
                 Q#NNNNNN888WWWgggggWWW8BQ                           
                  Q#N8WWWg%%%RR%%%%gggggggWQQ          ${chalk.white(
-                   `       QoB    `
+                   `       QoB    `,
                  )}
                    Q%%%%RRRDDDDDRRRRRRR%%gg8NQ        ${chalk.white(
-                     `      Q\\|Q    `
+                     `      Q\\|Q    `,
                    )}
                     QgRDDDRRRRDDDDDDDDRR%gWN#BQQ      ${chalk.white(
-                      `    #+ |Q     `
+                      `    #+ |Q     `,
                     )}
                       QRRDRRRRDDDDDDR%%%gg88NNBBQQQ   ${chalk.white(
-                        `  D_ 7Q       `
+                        `  D_ 7Q       `,
                       )}
                        QRDDDRDDDDRRR%ggW8NNN##BBBQQQQq${chalk.white(
-                         ` <\`L          `
+                         ` <\`L          `,
                        )}
                          gRRRRRR%g8NN8WgggggggggW88N##d             
                           8%g8NBB#N8Wg%RRDDDDDRR%%gggNBQQ           
@@ -40,17 +40,17 @@ export default ({ thoughts }) => `
                       DR                             QQQQQQQQQQQQ   
                     dd                                   QQQQQQQQ   
         ${chalk.white(
-          `          Qdd `
+          `          Qdd `,
         )}                                      QQQQQ   
         ${chalk.white(
-          `   tk   D<;N  `
+          `   tk   D<;N  `,
         )}                                       QQQQ   
         ${chalk.white(
-          `    *.~,;g    `
+          `    *.~,;g    `,
         )}                                         QQ   
         ${chalk.white(
-          `    d*tSB     `
+          `    d*tSB     `,
         )}                                               
                                                                     
 `)}
-`
+`;

@@ -8,4 +8,4 @@ export default [
   'Come join me. My garden needs tending.',
   "Next time, don't forget the water.",
   'They can bury us deep, but we always grow back.',
-]
+];

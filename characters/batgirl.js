@@ -1,4 +1,4 @@
-import chalk from 'chalk'
+import chalk from 'chalk';
 
 export default ({ thoughts }) => `
        ${thoughts}
@@ -27,4 +27,4 @@ export default ({ thoughts }) => `
           ,@@@@@@@@@@@@@&#((#&@@@@@@@@@@#         @@@@@@@@@@@&#((%&@@@@@@@@@@@@@     
              .@@@/                   .(             /                    &@@@        
 `)}                    
-`
+`;

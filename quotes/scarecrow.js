@@ -5,4 +5,4 @@ export default [
   'Aw, having trouble?',
   "There's nothing to fear but fear itself!",
   "Who knows you're here? Who knows?",
-]
+];

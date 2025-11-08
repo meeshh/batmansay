@@ -4,4 +4,4 @@ export default [
   'I never said thank you.',
   'I knew Harvey Dent. I was his friend. And it will be a very long time before someone inspires us the way he did. I believed in Harvey Dent.',
   'Batman has the resources, the will, and the drive to continue. And that is the reason, no matter what you do, no matter how many of us you kill, you cannot win!',
-]
+];

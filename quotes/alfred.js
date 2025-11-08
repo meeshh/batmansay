@@ -3,4 +3,4 @@ export default [
   'The Lamborghini, Then.',
   "Don't Worry, Master Wayne. ...",
   "They'll Hate You For It, But That's The Point Of Batman.",
-]
+];
