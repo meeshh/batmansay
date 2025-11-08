@@ -55,5 +55,6 @@
   "preferGlobal": true,
   "engines": {
     "node": ">= 4"
-  }
+  },
+  "packageManager": "yarn@4.11.0"
 }
