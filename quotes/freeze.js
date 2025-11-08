@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   'What killed the dinosaurs? The Ice Age!',
   "Let's kick some ice!",
   'Cool party!',

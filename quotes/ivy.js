@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   "I Am Nature's Arm. Her Spirit. Hell, I Am Mother Nature.",
   "That's Some Cologne You Have",
   "A Very Enlightened Statement Batman. We'll Carve It On Your Headstone.",

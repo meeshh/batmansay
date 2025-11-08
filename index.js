@@ -1,15 +1,10 @@
-const chalk = require('chalk')
-const { Configuration, OpenAIApi } = require('openai')
-const balloon = require('./lib/balloon')
-const chars = require('./lib/characters')
-
-const characters = require('./characters')
+import chalk from 'chalk'
+import OpenAI from 'openai'
+import * as balloon from './lib/balloon.js'
+import * as chars from './lib/characters.js'
+import characters from './characters.js'
 
 const DEFAULT = 'batman'
-
-const configuration = new Configuration({
-  apiKey: process.env.TOKEN_OPENAI,
-})
 
 const chooseRandom = (data) => {
   let total = 0
@@ -35,7 +30,7 @@ const [chosenCharacter, chosenWeight] = chooseRandom(characters)
 
 let quotes
 
-function buildCharacter(options) {
+async function buildCharacter(options) {
   let ofCharacter
   if (options.f !== 'default' && chars.listSync().indexOf(options.f) !== -1) {
     ofCharacter = options.f
@@ -44,7 +39,8 @@ function buildCharacter(options) {
   } else {
     ofCharacter = chosenCharacter
   }
-  quotes = require(`./quotes/${ofCharacter}`)
+  const quotesModule = await import(`./quotes/${ofCharacter}.js`)
+  quotes = quotesModule.default
 
   const stars = options.f ? '* NOT AVAILABLE WITH -f option' : 11 - chosenWeight
 
@@ -64,12 +60,14 @@ function buildCharacter(options) {
   return options
 }
 
-exports.list = chars.list
+export const list = chars.list
 
 async function generateAIText(character) {
-  const openai = new OpenAIApi(configuration)
-  return openai
-    .createCompletion({
+  const openai = new OpenAI({
+    apiKey: process.env.TOKEN_OPENAI,
+  })
+  try {
+    const response = await openai.completions.create({
       model: 'text-davinci-003',
       prompt: `get me a random quote of ${character} from the batman universe but return to me only the words that they said`,
       temperature: 0.9,
@@ -78,19 +76,20 @@ async function generateAIText(character) {
       max_tokens: 2048,
       presence_penalty: -1.0,
     })
-    .then((response) => {
-      return response.data.choices[0].text
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+    return response.choices[0].text
+  } catch (error) {
+    console.log(error)
+    return undefined
+  }
 }
 
 async function selectQuote(character) {
   let selectedQuote
   if (process.env.TOKEN_OPENAI) {
     selectedQuote = await generateAIText(character)
-  } else {
+  }
+
+  if (!selectedQuote) {
     selectedQuote = quotes[Math.floor(Math.random() * quotes.length)]
   }
 
@@ -107,7 +106,8 @@ async function doIt(options, sayAloud) {
     charFile = options.f || 'default'
   }
 
-  const char = require(`./characters/${charFile}.js`)
+  const charModule = await import(`./characters/${charFile}.js`)
+  const char = charModule.default
   const face = { thoughts: sayAloud ? chalk.white('\\') : chalk.grey('o') }
   const action = sayAloud ? 'say' : 'think'
 
@@ -118,7 +118,6 @@ async function doIt(options, sayAloud) {
 
   const filledBalloon = balloon[action](
     options._.join(' ') ||
-      // quotes[Math.floor(Math.random() * quotes.length)] ||
       myQuote.trim() ||
       options.text,
     options.n ? null : options.W
@@ -127,12 +126,12 @@ async function doIt(options, sayAloud) {
   return filledBalloon + char(face)
 }
 
-exports.say = async function say(options) {
-  const res = await doIt(buildCharacter(options), true)
+export async function say(options) {
+  const res = await doIt(await buildCharacter(options), true)
   console.log(res)
 }
 
-exports.think = async function think(options) {
-  const res = await doIt(buildCharacter(options), false)
+export async function think(options) {
+  const res = await doIt(await buildCharacter(options), false)
   console.log(res)
 }

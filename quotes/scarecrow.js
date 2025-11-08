@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   'Do you want my opinion? You need to lighten up.',
   'You look like a man who takes himself too seriously.',
   'Take a seat. Have a drink.',

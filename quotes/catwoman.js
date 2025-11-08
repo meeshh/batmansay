@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   "Rabbiting? I've never rabbited in my life! I've pussy-footed. I've cat-scratched. \nI've even kittycornered. But I don't rabbit!",
   "They may suspect me, but they'll never see me. They may chase me, but they'll never catch me. Never, never, ever catch me.",
   'Little birds should stay away from big bad kittycats.',

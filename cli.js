@@ -1,7 +1,12 @@
 #!/usr/bin/env node
-require('dotenv').config() // this loads env vars
+import 'dotenv/config' // this loads env vars
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
+import * as batmansay from './index.js'
+import getStdin from 'get-stdin'
+import stripFinalNewline from 'strip-final-newline'
 
-const yargs = require('yargs')
+const yargsInstance = yargs(hideBin(process.argv))
   .usage(
     `
 Usage: $0 [--think] [-f character] [-l] text
@@ -32,16 +37,15 @@ If the program is invoked as batmanthink then the character will think its messa
   .alias('h', 'help')
   .alias('v', 'version')
 
-const { argv } = yargs
+const { argv } = yargsInstance
 
 function say() {
-  const module = require('./index')
   const think = /think$/.test(argv.$0) || argv.think
-  return think ? module.think(argv) : module.say(argv)
+  return think ? batmansay.think(argv) : batmansay.say(argv)
 }
 
 function listCharacters() {
-  require('./index').list((err, list) => {
+  batmansay.list((err, list) => {
     if (err) throw new Error(err)
     console.log(list.join('\n'))
   })
@@ -52,8 +56,8 @@ if (argv.l) {
 } else if (argv._.length) {
   say()
 } else {
-  require('get-stdin')().then((data) => {
-    argv._ = [require('strip-final-newline')(data)]
+  getStdin().then((data) => {
+    argv._ = [stripFinalNewline(data)]
     say()
   })
 }

@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   'I see a beautiful city and a brilliant people rising from this abyss. I see the lives for which I lay down my life, peaceful, useful, prosperous and happy. I see that I hold a sanctuary in their hearts, and in the hearts of their descendants, generations hence.',
   "We're not retreating. We're advancing in a different direction.",
   'I never said thank you.',

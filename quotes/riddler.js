@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   "Riddle me this, riddle me that, who's afraid of the big, black bat? ",
   "You're ruining my big party! Are you insane? ",
   "The absolute fabulous Dr. Chase Meridian. She enjoys hiking, getting her nails done, \nand foolisihly hopes to be the love of Bruce's life! ",

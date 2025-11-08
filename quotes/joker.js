@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   'The only sensible way to live in this world is without rules.',
   'Smile, because it confuses people. Smile, because it’s easier than explaining what is killing you inside.',
   'What doesn’t kill you, simply makes you stranger!',

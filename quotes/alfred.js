@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   "At This Point, I'd Set You Up With A Chimpanzee.",
   'The Lamborghini, Then.',
   "Don't Worry, Master Wayne. ...",

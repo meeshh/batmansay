@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   'To Manipulate The Fears Of Others, You Must First Master Your Own.',
   "If You Devote Yourself To An Ideal, They Can't Stop You, Then You Become Something Else Entirely: A Legend.",
   'When A Forest Grows Too Wild, A Purging Fire Is Inevitable And Natural.',

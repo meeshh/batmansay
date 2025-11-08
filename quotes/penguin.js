@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   "Just the pussy I've been lookin' for!",
   'Why is there always someone who brings eggs and tomatoes to a speech?',
   'Ah, shit... I picked a cute one.',

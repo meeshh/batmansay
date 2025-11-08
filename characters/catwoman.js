@@ -1,4 +1,4 @@
-module.exports = ({ thoughts }) => `
+export default ({ thoughts }) => `
        ${thoughts}
         ${thoughts}
                ~j'                            .f~

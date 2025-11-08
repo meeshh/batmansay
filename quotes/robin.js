@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   "My name's Richard Grayson, but all the kids at the orphanage call me Dick. ",
   "Hey, I was thinking. If I'm gonna be a superhero, and go on awesome superhero missions like this one, \ncan we use code names? Mine can be Robin. ",
   "Woo-hoo! A month ago, I had no dads. Then I had one dad. Now I have two dads, and one of them is Batman! \nIt's raining dads!",

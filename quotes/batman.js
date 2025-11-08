@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   'Then I reminded myself that all intelligent children suffer bad dreams.',
   'All men have limits. They learn what they are and learn not to exceed \nthem. I ignore mine.',
   "Never start with the head, the victim gets all fuzzy. He can't feel the next.",

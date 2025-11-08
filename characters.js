@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   ['joker', 8],
   ['penguin', 7],
   ['batman', 10],
