@@ -1,7 +1,6 @@
-/* eslint-disable prettier/prettier */
-const chalk = require('chalk')
+import chalk from 'chalk';
 
-module.exports = ({ thoughts }) => `
+export default ({ thoughts }) => `
               ${thoughts}
                ${thoughts}
                 ${chalk.white(`  
@@ -66,4 +65,4 @@ module.exports = ({ thoughts }) => `
                         XX                                                                          
                                                                                                     
 `)} 
-`
+`;
