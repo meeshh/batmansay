@@ -2,22 +2,28 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 8
+  version: 10
   cacheKey: 10c0
 
-"@biomejs/biome@npm:^2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/biome@npm:2.3.4"
+"@biomejs/biome@npm:^2.6.7":
+  version: 2.6.7
+  resolution: "@biomejs/biome@npm:2.6.7"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:2.3.4"
-    "@biomejs/cli-darwin-x64": "npm:2.3.4"
-    "@biomejs/cli-linux-arm64": "npm:2.3.4"
-    "@biomejs/cli-linux-arm64-musl": "npm:2.3.4"
-    "@biomejs/cli-linux-x64": "npm:2.3.4"
-    "@biomejs/cli-linux-x64-musl": "npm:2.3.4"
-    "@biomejs/cli-win32-arm64": "npm:2.3.4"
-    "@biomejs/cli-win32-x64": "npm:2.3.4"
+    "@biomejs/cli-android-arm64": "npm:2.6.7"
+    "@biomejs/cli-android-x64": "npm:2.6.7"
+    "@biomejs/cli-darwin-arm64": "npm:2.6.7"
+    "@biomejs/cli-darwin-x64": "npm:2.6.7"
+    "@biomejs/cli-linux-arm64": "npm:2.6.7"
+    "@biomejs/cli-linux-arm64-musl": "npm:2.6.7"
+    "@biomejs/cli-linux-x64": "npm:2.6.7"
+    "@biomejs/cli-linux-x64-musl": "npm:2.6.7"
+    "@biomejs/cli-win32-arm64": "npm:2.6.7"
+    "@biomejs/cli-win32-x64": "npm:2.6.7"
   dependenciesMeta:
+    "@biomejs/cli-android-arm64":
+      optional: true
+    "@biomejs/cli-android-x64":
+      optional: true
     "@biomejs/cli-darwin-arm64":
       optional: true
     "@biomejs/cli-darwin-x64":
@@ -36,62 +42,76 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10c0/61bb2e3b98ebb26cc21e5690492bc09793c9135c34fd33230c227d4cb707a19ced578d20df4cab8b257c70cef006312f1050cdba3abdf8c0aa478ca6a347b27f
+  checksum: 10c0/2ad0a8076ce352386dd14f6170eb1ddd8e9ef5b21d6b195a0b92e0a0216b541b85d51eb41432767d00f756c20c47960ca50c475369626117c9e4dc4d12174f91
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-darwin-arm64@npm:2.3.4"
+"@biomejs/cli-android-arm64@npm:2.6.7":
+  version: 2.6.7
+  resolution: "@biomejs/cli-android-arm64@npm:2.6.7"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-android-x64@npm:2.6.7":
+  version: 2.6.7
+  resolution: "@biomejs/cli-android-x64@npm:2.6.7"
+  conditions: os=android & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-darwin-arm64@npm:2.6.7":
+  version: 2.6.7
+  resolution: "@biomejs/cli-darwin-arm64@npm:2.6.7"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-darwin-x64@npm:2.3.4"
+"@biomejs/cli-darwin-x64@npm:2.6.7":
+  version: 2.6.7
+  resolution: "@biomejs/cli-darwin-x64@npm:2.6.7"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.3.4"
+"@biomejs/cli-linux-arm64-musl@npm:2.6.7":
+  version: 2.6.7
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.6.7"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-linux-arm64@npm:2.3.4"
+"@biomejs/cli-linux-arm64@npm:2.6.7":
+  version: 2.6.7
+  resolution: "@biomejs/cli-linux-arm64@npm:2.6.7"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-linux-x64-musl@npm:2.3.4"
+"@biomejs/cli-linux-x64-musl@npm:2.6.7":
+  version: 2.6.7
+  resolution: "@biomejs/cli-linux-x64-musl@npm:2.6.7"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-linux-x64@npm:2.3.4"
+"@biomejs/cli-linux-x64@npm:2.6.7":
+  version: 2.6.7
+  resolution: "@biomejs/cli-linux-x64@npm:2.6.7"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-win32-arm64@npm:2.3.4"
+"@biomejs/cli-win32-arm64@npm:2.6.7":
+  version: 2.6.7
+  resolution: "@biomejs/cli-win32-arm64@npm:2.6.7"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-win32-x64@npm:2.3.4"
+"@biomejs/cli-win32-x64@npm:2.6.7":
+  version: 2.6.7
+  resolution: "@biomejs/cli-win32-x64@npm:2.6.7"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -100,6 +120,13 @@ __metadata:
   version: 6.2.2
   resolution: "ansi-regex@npm:6.2.2"
   checksum: 10c0/05d4acb1d2f59ab2cf4b794339c7b168890d44dda4bf0ce01152a8da0213aca207802f930442ce8cd22d7a92f44907664aac6508904e75e038fa944d2601b30f
+  languageName: node
+  linkType: hard
+
+"ansi-regex@npm:^6.2.2":
+  version: 6.4.0
+  resolution: "ansi-regex@npm:6.4.0"
+  checksum: 10c0/e42f68ffa21aac4c4de27aad601bb5ea415b5a07b127681ef44728195f22231b77bc39230ce0c976420d84650b7bf5a5b60eb4e7500c1f74e9a3f3cd4a68f3f6
   languageName: node
   linkType: hard
 
@@ -114,22 +141,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "batmansay@workspace:."
   dependencies:
-    "@biomejs/biome": "npm:^2.3.4"
-    chalk: "npm:^5.6.2"
-    get-stdin: "npm:^9.0.0"
-    string-width: "npm:^8.1.0"
-    strip-final-newline: "npm:^4.0.0"
-    yargs: "npm:^18.0.0"
+    "@biomejs/biome": "npm:^2.6.7"
+    chalk: "npm:^6.0.1"
+    string-width: "npm:^9.0.0"
+    yargs: "npm:^18.2.0"
   bin:
     batmansay: cli.js
     batmanthink: cli.js
   languageName: unknown
   linkType: soft
 
-"chalk@npm:^5.6.2":
-  version: 5.6.2
-  resolution: "chalk@npm:5.6.2"
-  checksum: 10c0/99a4b0f0e7991796b1e7e3f52dceb9137cae2a9dfc8fc0784a550dc4c558e15ab32ed70b14b21b52beb2679b4892b41a0aa44249bcb996f01e125d58477c6976
+"chalk@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "chalk@npm:6.0.1"
+  checksum: 10c0/4c58238fa874f531b5201bf99ebd374742be31f8e306c7783d930856aec305f2dea3e07531a8805b2a7ba92807296e39ced52e9f673703e0264d96e83998a429
   languageName: node
   linkType: hard
 
@@ -165,17 +190,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-east-asian-width@npm:^1.0.0, get-east-asian-width@npm:^1.3.0":
+"get-east-asian-width@npm:^1.0.0":
   version: 1.4.0
   resolution: "get-east-asian-width@npm:1.4.0"
   checksum: 10c0/4e481d418e5a32061c36fbb90d1b225a254cc5b2df5f0b25da215dcd335a3c111f0c2023ffda43140727a9cafb62dac41d022da82c08f31083ee89f714ee3b83
   languageName: node
   linkType: hard
 
-"get-stdin@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "get-stdin@npm:9.0.0"
-  checksum: 10c0/7ef2edc0c81a0644ca9f051aad8a96ae9373d901485abafaabe59fd347a1c378689d8a3d8825fb3067415d1d09dfcaa43cb9b9516ecac6b74b3138b65a8ccc6b
+"get-east-asian-width@npm:^1.5.0, get-east-asian-width@npm:^1.7.0":
+  version: 1.7.0
+  resolution: "get-east-asian-width@npm:1.7.0"
+  checksum: 10c0/680a5f611a186e4a065291f31821f7e4ad7742625be814e05b8ab5535c6fa53562bc0333a83138fca5f2e1030ed960a561b2fd4629e0cff0dc68b19cf46d7c53
   languageName: node
   linkType: hard
 
@@ -190,13 +215,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"string-width@npm:^8.1.0":
-  version: 8.1.0
-  resolution: "string-width@npm:8.1.0"
+"string-width@npm:^8.2.1":
+  version: 8.3.0
+  resolution: "string-width@npm:8.3.0"
   dependencies:
-    get-east-asian-width: "npm:^1.3.0"
-    strip-ansi: "npm:^7.1.0"
-  checksum: 10c0/749b5d0dab2532b4b6b801064230f4da850f57b3891287023117ab63a464ad79dd208f42f793458f48f3ad121fe2e1f01dd525ff27ead957ed9f205e27406593
+    get-east-asian-width: "npm:^1.5.0"
+    strip-ansi: "npm:^7.1.2"
+  checksum: 10c0/bc354b27772777c314e6792106f01586e959f36abb3d4b8ad46c4d4ee92d5e906acb10c1f3be97a85ae0ba1b11389094bc5672999fc5f03f12d22a4725fa30fe
+  languageName: node
+  linkType: hard
+
+"string-width@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "string-width@npm:9.0.0"
+  dependencies:
+    get-east-asian-width: "npm:^1.7.0"
+    strip-ansi: "npm:^7.2.0"
+  checksum: 10c0/fe420883178c224a121e771d81aafc520606bae31be5fdc0f368ff5c3facdb427b659ee3ad85710b67fe6e2a7d4535d0332b61e096326ea0eb92c7b5cafa0b06
   languageName: node
   linkType: hard
 
@@ -209,10 +244,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strip-final-newline@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "strip-final-newline@npm:4.0.0"
-  checksum: 10c0/b0cf2b62d597a1b0e3ebc42b88767f0a0d45601f89fd379a928a1812c8779440c81abba708082c946445af1d6b62d5f16e2a7cf4f30d9d6587b89425fae801ff
+"strip-ansi@npm:^7.1.2, strip-ansi@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "strip-ansi@npm:7.2.0"
+  dependencies:
+    ansi-regex: "npm:^6.2.2"
+  checksum: 10c0/544d13b7582f8254811ea97db202f519e189e59d35740c46095897e254e4f1aa9fe1524a83ad6bc5ad67d4dd6c0281d2e0219ed62b880a6238a16a17d375f221
   languageName: node
   linkType: hard
 
@@ -241,16 +278,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs@npm:^18.0.0":
-  version: 18.0.0
-  resolution: "yargs@npm:18.0.0"
+"yargs@npm:^18.2.0":
+  version: 18.2.0
+  resolution: "yargs@npm:18.2.0"
   dependencies:
     cliui: "npm:^9.0.1"
     escalade: "npm:^3.1.1"
     get-caller-file: "npm:^2.0.5"
-    string-width: "npm:^7.2.0"
+    string-width: "npm:^8.2.1"
     y18n: "npm:^5.0.5"
     yargs-parser: "npm:^22.0.0"
-  checksum: 10c0/bf290e4723876ea9c638c786a5c42ac28e03c9ca2325e1424bf43b94e5876456292d3ed905b853ebbba6daf43ed29e772ac2a6b3c5fb1b16533245d6211778f3
+  checksum: 10c0/7419338c3c00f9143ec6b6ab168335061c6f5342d161642aec23ff119e28cac1c417e0eca1d7dc82fd084f07207cc5d34c7d8315f605c0e3dbf12c350e405f3f
   languageName: node
   linkType: hard

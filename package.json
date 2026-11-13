@@ -1,6 +1,6 @@
 {
   "name": "batmansay",
-  "version": "3.2.0",
+  "version": "4.0.0",
   "description": "batmansay is a configurable talking character from batman",
   "type": "module",
   "license": "MIT",
@@ -36,21 +36,21 @@
   "scripts": {
     "start": "echo | node cli.js",
     "lint": "biome check .",
-    "format": "biome format --write ."
+    "format": "biome format --write .",
+    "test": "node --test",
+    "preview": "node scripts/preview.js"
   },
   "dependencies": {
-    "chalk": "^5.6.2",
-    "get-stdin": "^9.0.0",
-    "string-width": "^8.1.0",
-    "strip-final-newline": "^4.0.0",
-    "yargs": "^18.0.0"
+    "chalk": "^6.0.1",
+    "string-width": "^9.0.0",
+    "yargs": "^18.2.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.4"
+    "@biomejs/biome": "^2.6.7"
   },
   "preferGlobal": true,
   "engines": {
-    "node": ">= 4"
+    "node": ">=22"
   },
-  "packageManager": "yarn@4.11.0"
+  "packageManager": "yarn@4.18.1"
 }
