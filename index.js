@@ -7,15 +7,13 @@ const DEFAULT = 'batman';
 
 const chooseRandom = (data) => {
   let total = 0;
-  // eslint-disable-next-line no-restricted-syntax
   for (const char of data) {
     total += char[1];
   }
 
   const threshold = Math.random() * total;
   total = 0;
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < data.length - 1; ++i) {
+  for (let i = 0; i < data.length - 1; i += 1) {
     total += data[i][1];
     if (total >= threshold) {
       return data[i];
@@ -27,82 +25,58 @@ const chooseRandom = (data) => {
 
 const [chosenCharacter, chosenWeight] = chooseRandom(characters);
 
-let quotes;
+function pickCharacter(options) {
+  const available = chars.listSync();
+  if (options.r) {
+    return available[Math.floor(Math.random() * available.length)];
+  }
+  return available.includes(options.f) ? options.f : chosenCharacter;
+}
 
 async function buildCharacter(options) {
-  let ofCharacter;
-  if (options.f !== 'default' && chars.listSync().indexOf(options.f) !== -1) {
-    ofCharacter = options.f;
-  } else if (options.f === 'default' || chosenCharacter === 'default') {
-    ofCharacter = DEFAULT;
-  } else {
-    ofCharacter = chosenCharacter;
-  }
-  const quotesModule = await import(`./quotes/${ofCharacter}.js`);
-  quotes = quotesModule.default;
+  const name = pickCharacter(options);
+  // The default character has no quotes of its own and borrows batman's.
+  const displayName = name === 'default' ? DEFAULT : name;
+  const quotesModule = await import(`./quotes/${displayName}.js`);
 
-  const stars = options.f
-    ? '* NOT AVAILABLE WITH -f option'
-    : 11 - chosenWeight;
+  const stars =
+    options.f || options.r
+      ? '* NOT AVAILABLE WITH -f OR -r OPTIONS'
+      : '⭐'.repeat(11 - chosenWeight);
 
-  // eslint-disable-next-line no-param-reassign
-  options.f =
-    chars.listSync().indexOf(options.f) !== -1 ? options.f : chosenCharacter;
   console.log(
-    chalk.bgRed.white(
-      options.f === 'default'
-        ? ` ${DEFAULT.toUpperCase()} `
-        : ` ${options.f.toUpperCase()} `,
-    ),
-    chalk.bgYellow.black(
-      ` ${Number.isNaN(stars) ? stars : '⭐'.repeat(stars)} `,
-    ),
+    chalk.bgRed.white(` ${displayName.toUpperCase()} `),
+    chalk.bgYellow.black(` ${stars} `),
   );
-  return options;
+  return { name, quotes: quotesModule.default };
 }
 
 export const list = chars.list;
 
-function selectQuote() {
+function selectQuote(quotes) {
   return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
 async function doIt(options, sayAloud) {
-  let charFile;
-
-  if (options.r) {
-    const charsList = chars.listSync();
-    charFile = charsList[Math.floor(Math.random() * charsList.length)];
-  } else {
-    charFile = options.f || 'default';
-  }
-
-  const charModule = await import(`./characters/${charFile}.js`);
+  const { name, quotes } = await buildCharacter(options);
+  const charModule = await import(`./characters/${name}.js`);
   const char = charModule.default;
   const face = { thoughts: sayAloud ? chalk.white('\\') : chalk.grey('o') };
 
-  // handle the selected quote.
-  const myQuote = selectQuote();
-
+  const text =
+    options._.join(' ') || selectQuote(quotes).trim() || options.text;
+  const wrap = options.n ? null : options.W;
   const filledBalloon = sayAloud
-    ? balloonSay(
-        options._.join(' ') || myQuote.trim() || options.text,
-        options.n ? null : options.W,
-      )
-    : balloonThink(
-        options._.join(' ') || myQuote.trim() || options.text,
-        options.n ? null : options.W,
-      );
+    ? balloonSay(text, wrap)
+    : balloonThink(text, wrap);
 
   return filledBalloon + char(face);
 }
 
 export async function say(options) {
-  const res = await doIt(await buildCharacter(options), true);
-  console.log(res);
+  console.log(await doIt(options, true));
 }
 
 export async function think(options) {
-  const res = await doIt(await buildCharacter(options), false);
-  console.log(res);
+  console.log(await doIt(options, false));
 }
