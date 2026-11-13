@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import chalk from 'chalk';
 
 export default ({ thoughts }) => `

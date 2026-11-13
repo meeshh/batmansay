@@ -6,37 +6,45 @@
 
 This project is an adaptation of cowsay which is a popular Unix program but instead, it randomly outputs ASCII art from the Batman universe and some of their famous quotes
 
-
 ### What to expect?
 
 The commands `batmansay` and `batmanthink` print a random character from the Batman universe in your SHELL. Each character has a weight depending on its rarity. The number of stars next to the character's name represents the rarity of the character. The more stars, the more rare the character is.
-
 
 ## ❖ Install
 
     npm install -g batmansay
 
+Requires Node.js 22 or newer.
+
+Upgrading from 3.x: version 4 needs Node.js 22, and the library's `list()`
+no longer takes a callback; it returns a Promise of the character names.
+
 ## ❖ Usage
 
-  To randomly select a character from the batman universe and one of their quotes
-    `batmansay`
+To randomly select a character from the batman universe and one of their quotes
+`batmansay`
 
-  To list the available characters
-    `batmansay -l`
+To list the available characters
+`batmansay -l`
 
-  To display a specific character
-    `batmansay -f joker`
+To display a specific character
+`batmansay -f joker`
 
-  To let the character say the custom text after the command and the options if passed
-    `batmansay my custom text` 
-  
-  OR you can simply generate the text with another tool and pipe it into `batmansay` like the following: `echo "My random text" | batmansay`
+To pick a random character, ignoring rarity
+`batmansay -r`
 
-  ![JOKER](https://github.com/meeshh/batmansay/blob/main/images/screenshot_joker.png?raw=true)
+To let the character say the custom text after the command and the options if passed
+`batmansay my custom text`
+
+OR you can simply generate the text with another tool and pipe it into `batmansay` like the following: `echo "My random text" | batmansay`
+
+The message wraps at the column given with `-W` (for example `batmansay -W 40`), and `-n` turns wrapping off.
+
+![JOKER](https://github.com/meeshh/batmansay/blob/main/images/screenshot_joker.png?raw=true)
 
 or
 
-  replace `batmansay` of the above commands with `batmanthink`
+replace `batmansay` of the above commands with `batmanthink`
 
 The `batmanthink` command shows the characters as if they are thinking instead of saying something
 
@@ -46,36 +54,54 @@ Feel free to add the command to your `.bashrc` or `.zshrc` files so you can have
 
 ## ❖ Development
 
-This project uses [Yarn](https://yarnpkg.com/) (v4.11.0) with [Corepack](https://nodejs.org/api/corepack.html) for package management and [Biome](https://biomejs.dev/) for linting and formatting.
+This project uses [Yarn](https://yarnpkg.com/) (v4) with [Corepack](https://nodejs.org/api/corepack.html) for package management and [Biome](https://biomejs.dev/) for linting and formatting.
 
 To get started:
 
 1. Enable Corepack (if not already enabled):
+
    ```bash
    corepack enable
    ```
 
 2. Install dependencies:
+
    ```bash
    yarn install
    ```
 
 3. Run linting:
+
    ```bash
    yarn lint
    ```
 
-4. Format code:
+4. Run the tests:
+
+   ```bash
+   yarn test
+   ```
+
+5. Format code:
+
    ```bash
    yarn format
    ```
 
+6. Preview a character's art without colours, under a column ruler:
+
+   ```bash
+   yarn preview joker
+   ```
+
 ## ❖ Contribution
 
-Make sure to add a character file `character_name.js` in the `characters` directory. Replace character_name with the name of the character. Add the `ascii` image to the file and export it. Please see the other characters as examples.
+Make sure to add a character file `character_name.js` in the `characters` directory. Replace character_name with the name of the character. Add the `ascii` image to the file and export it. The file is an ES module whose default export takes `{ thoughts }` and returns the art. Please see the other characters as examples.
 
 Also, make sure to add a file with the same name in the `quotes` directory. The file of the quotes, exports an array of strings where each string is one of the quotes from your specific character.
 
 Last but not least, you must add the character array in the file `characters.js` where the first entry in the array is the character's name and the second entry is the rarity where 0 is the rarest and 10 is the most abundant.
+
+Run `yarn lint` and `yarn test` before committing: the tests check that these three files stay in sync and that every character renders.
 
 Please feel free to fork it and contribute. Whether by suggesting new features or simply adding characters from the batman universe with their quotes.
