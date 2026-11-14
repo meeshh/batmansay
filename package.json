@@ -1,6 +1,6 @@
 {
   "name": "batmansay",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "batmansay is a configurable talking character from batman",
   "type": "module",
   "license": "MIT",
