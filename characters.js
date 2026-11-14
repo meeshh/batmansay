@@ -27,5 +27,6 @@ export default [
   ['blackmask', 3],
   ['hush', 2],
   ['zsasz', 2],
+  ['firefly', 3],
   ['default', 3],
 ];
